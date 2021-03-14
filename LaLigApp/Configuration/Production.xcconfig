@@ -1,0 +1,18 @@
+//
+//  Production.xcconfig
+//  LaLigApp
+//
+//  Created by Valentín Sánchez Campañón on 11/3/21.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+#include "Pods/Target Support Files/Pods-LaLigApp/Pods-LaLigApp.debug.xcconfig"
+#include "Pods/Target Support Files/Pods-LaLigApp/Pods-LaLigApp.release.xcconfig"
+
+
+APP_ENVIRONMENT=Production
+
+// App Settings
+APP_NAME = LaLigApp
+APP_BUNDLE_ID = com.none.LaLigApp.pro

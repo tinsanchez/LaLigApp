@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoadingViewController" customModule="LaLigApp" customModuleProvider="target">
+            <connections>
+                <outlet property="activityView" destination="HDm-zT-abi" id="2iq-Z0-ezV"/>
+                <outlet property="container" destination="I69-YG-pnM" id="ThC-9o-pSz"/>
+                <outlet property="loadingLabel" destination="oo2-ib-YpC" id="V9q-tD-ghB"/>
+                <outlet property="loadingLabelLeftSpacing" destination="HNh-NF-uV7" id="Ae1-t8-Eta"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I69-YG-pnM">
+                    <rect key="frame" x="92" y="296" width="191" height="75"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="F6X-ld-RKU">
+                        <rect key="frame" x="0.0" y="0.0" width="191" height="75"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="HDm-zT-abi">
+                                <rect key="frame" x="20" y="19" width="37" height="37"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityLabel" value="loading activity "/>
+                                </userDefinedRuntimeAttributes>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_loading_text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oo2-ib-YpC">
+                                <rect key="frame" x="67" y="27.5" width="104" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <accessibility key="accessibilityConfiguration">
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
+                        <constraints>
+                            <constraint firstItem="oo2-ib-YpC" firstAttribute="centerY" secondItem="HDm-zT-abi" secondAttribute="centerY" id="0Up-8t-RDv"/>
+                            <constraint firstItem="oo2-ib-YpC" firstAttribute="leading" secondItem="HDm-zT-abi" secondAttribute="trailing" constant="10" id="HNh-NF-uV7"/>
+                            <constraint firstItem="HDm-zT-abi" firstAttribute="leading" secondItem="F6X-ld-RKU" secondAttribute="leading" constant="20" id="g7y-XG-wWp"/>
+                            <constraint firstAttribute="trailing" secondItem="oo2-ib-YpC" secondAttribute="trailing" constant="20" id="ilM-ED-Dlu"/>
+                            <constraint firstItem="HDm-zT-abi" firstAttribute="centerY" secondItem="F6X-ld-RKU" secondAttribute="centerY" id="sfF-mi-DJF"/>
+                        </constraints>
+                    </view>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="75" id="Alo-fR-Ac2"/>
+                    </constraints>
+                    <blurEffect style="dark"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="accessibilityLabel" value="loading container"/>
+                    </userDefinedRuntimeAttributes>
+                </visualEffectView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <accessibility key="accessibilityConfiguration" label="loading view">
+                <bool key="isElement" value="YES"/>
+            </accessibility>
+            <constraints>
+                <constraint firstItem="I69-YG-pnM" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Lj1-pN-3XI"/>
+                <constraint firstItem="I69-YG-pnM" firstAttribute="width" relation="lessThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.9" id="yMy-ah-96H"/>
+                <constraint firstItem="I69-YG-pnM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="zpz-gj-dbh"/>
+            </constraints>
+            <point key="canvasLocation" x="138" y="153"/>
+        </view>
+    </objects>
+</document>
