@@ -37,8 +37,7 @@ class TeamListPresenter: BasePresenter, TeamListPresenterContract {
     func selectTeamCell(index: Int) {
         if teamsList.count > index {
             let team = teamsList[index]
-            // TODO: descomentar una vez creada la lista detalle
-            // wireframe.showDetailTeamView(team: team)
+            wireframe?.showDetailTeamView(team: team)
         } else {
           debugPrint("Object at index \(index) not found")
         }

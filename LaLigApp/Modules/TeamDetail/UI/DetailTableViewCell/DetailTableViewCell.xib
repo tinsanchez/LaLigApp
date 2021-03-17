@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Y83-ff-eu4" customClass="DetailTableViewCell" customModule="LaLigApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Y83-ff-eu4" id="7qO-ei-DK6">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="eW5-WP-hyG">
+                        <rect key="frame" x="10" y="10" width="300" height="24"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tittle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="Uwz-xk-ZBh">
+                                <rect key="frame" x="0.0" y="2" width="147" height="20.5"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="cIW-bW-3qG">
+                                <rect key="frame" x="153" y="2.5" width="147" height="19.5"/>
+                                <fontDescription key="fontDescription" name="GillSans-Italic" family="Gill Sans" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <viewLayoutGuide key="safeArea" id="Dxy-xJ-3WB"/>
+                <constraints>
+                    <constraint firstItem="Dxy-xJ-3WB" firstAttribute="trailing" secondItem="eW5-WP-hyG" secondAttribute="trailing" constant="10" id="7PE-Q7-05A"/>
+                    <constraint firstItem="eW5-WP-hyG" firstAttribute="centerX" secondItem="7qO-ei-DK6" secondAttribute="centerX" id="DDz-mZ-vlU"/>
+                    <constraint firstItem="Dxy-xJ-3WB" firstAttribute="bottom" secondItem="eW5-WP-hyG" secondAttribute="bottom" constant="10" id="Pa4-Mw-9DZ"/>
+                    <constraint firstItem="eW5-WP-hyG" firstAttribute="top" secondItem="Dxy-xJ-3WB" secondAttribute="top" constant="10" id="QrO-86-vTj"/>
+                    <constraint firstItem="eW5-WP-hyG" firstAttribute="leading" secondItem="Dxy-xJ-3WB" secondAttribute="leading" constant="10" id="nKt-4O-ZuF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="descriptionLabel" destination="cIW-bW-3qG" id="BBz-gV-rVp"/>
+                <outlet property="tittleLabel" destination="Uwz-xk-ZBh" id="aJR-kb-7MV"/>
+            </connections>
+            <point key="canvasLocation" x="-478.26086956521743" y="61.607142857142854"/>
+        </tableViewCell>
+    </objects>
+</document>

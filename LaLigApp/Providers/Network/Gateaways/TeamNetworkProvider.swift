@@ -23,39 +23,23 @@ class TeamNetworkProvider: BaseNetworkProvider, TeamProviderContract {
         case initialPageLoadError, detailPageLoadError
     }
 
-    let kAPIResultsKey = "results"
-    let kAPIUrlKey = "url"
+    let kAPIResultsKey = "teams"
+    let kAPIUrlKey = "teams"
 
     func getTeams() -> Promise<[TeamDAO]> {
-        var detailPagePromise: [Promise<TeamDAO>] = []
+        
+        var teamPromise: [TeamDAO] = []
 
         return Promise<[TeamDAO]> { promise in
-
             self.getInitialPage().done { initialPage in
                 for element in initialPage {
-                    if let detailUrl = element[self.kAPIUrlKey] {
-                        detailPagePromise.append(self.getTeamDetail(fullURLString: detailUrl))
+                     print(element)
+                    if let teamDAO = try? TeamDAO(JSON: element) {
+                        // print(teamDAO)
+                        teamPromise.append(teamDAO)
                     }
                 }
-
-                when(resolved: detailPagePromise).done { results in
-                    var fullfilledPromiseValues: [TeamDAO] = []
-                    for case .fulfilled(let value) in results {
-                        // These promises succeeded, and the values will be what is return from
-                        // the last promises in chain1 and chain2
-                        print("Promise value is: \(value)")
-                        fullfilledPromiseValues.append(value)
-                    }
-
-                    debugPrint(results)
-
-                    promise.fulfill(fullfilledPromiseValues)
-                }.catch { error in
-                    debugPrint(error)
-                    // promise.reject(error)
-                }
-            }.catch { error in
-                promise.reject(error)
+                promise.fulfill(teamPromise)
             }
         }
     }
@@ -69,30 +53,17 @@ class TeamNetworkProvider: BaseNetworkProvider, TeamProviderContract {
         }
     }
     
-    private func getInitialPage() -> Promise<[[String: String]]> {
-        return Promise<[[String: String]]> { promise in
+    private func getInitialPage() -> Promise<[[String: Any]]> {
+        return Promise<[[String: Any]]> { promise in
             let loginDictionary: HTTPHeaders = [kLoginHeader: kLoginToken]
             sessionManager.request(getUrl(service: .kInitialPage), headers: loginDictionary).responseJSON { response in
                 guard let initialData = try? response.result.get() as? [String: Any],
-                      let initialDataResults = initialData[self.kAPIResultsKey] as? [[String: String]] else {
+                      let initialDataResults = initialData[self.kAPIResultsKey] as? [[String: Any]] else {
                     promise.reject(TeamNetworkError.initialPageLoadError)
-                    print(response)
                     return
                 }
-                print(initialDataResults)
                 promise.fulfill(initialDataResults)
             }
-            
-           /* sessionManager.request(getUrl(service: .kInitialPage)).responseJSON { response in
-                guard let initialData = try? response.result.get() as? [String: Any],
-                      let initialDataResults = initialData[self.kAPIResultsKey] as? [[String: String]] else {
-                    promise.reject(TeamNetworkError.initialPageLoadError)
-                    print(promise)
-                    return
-                }
-                
-                promise.fulfill(initialDataResults)
-            }*/
         }
     }
 
@@ -105,6 +76,7 @@ class TeamNetworkProvider: BaseNetworkProvider, TeamProviderContract {
                 }
 
                 if let teamDAO = try? TeamDAO(JSON: detailPageData) {
+                   // print(teamDAO)
                     promise.fulfill(teamDAO)
                 } else {
                     promise.reject(TeamNetworkError.detailPageLoadError)

@@ -6,14 +6,14 @@
 //
 
 import UIKit
-import SDWebImage
+import SwiftSVG
 
 class TeamListTableViewCell: UITableViewCell {
     
     static let cellId = "TeamListTableViewCell"
     
-    @IBOutlet weak var teamThumb: UIImageView!
     @IBOutlet weak var teamLabel: UILabel!
+    @IBOutlet weak var cellImageView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,8 +25,15 @@ class TeamListTableViewCell: UITableViewCell {
     
     func setUpData(team: Team) {
         if let url = URL(string: team.imageThumb) {
-            teamThumb.sd_setImage(with: url, completed: nil)
+            _ = UIView(SVGURL: url) { svglayer in
+                svglayer.resizeToFit(self.cellImageView.bounds)
+                self.cellImageView.layer.addSublayer(svglayer)
+            }
         }
         teamLabel.text = team.name
+    }
+    
+    override func prepareForReuse() {
+        cellImageView.layer.sublayers?.removeAll()
     }
 }

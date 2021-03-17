@@ -1,8 +1,8 @@
 //
-//  TeamListWireframe.swift
+//  TeamDetailWireframe.swift
 //  LaLigApp
 //
-//  Created by Valentín Sánchez Campañón on 12/3/21.
+//  Created by Valentín Sánchez Campañón on 15/3/21.
 //  Copyright © 2021 ___ORGANIZATIONNAME___. All rights reserved.
 //
 //
@@ -10,13 +10,13 @@
 import Foundation
 import UIKit
 
-class TeamListWireframe: BaseWireframe, TeamListWireframeContract {
+class TeamDetailWireframe: BaseWireframe, TeamDetailWireframeContract {
     
-    weak var output: TeamListWireframeOutputContract?
-    weak var view: UIViewController?
+    weak var output: TeamDetailWireframeOutputContract!
+    weak var view: UIViewController!
 
-    weak var loadingDelegate: LoadingViewDelegate?
-
+    weak var loadingDelegate: LoadingViewDelegate!
+    
     /// Show basic loading
     /// - Parameters:
     ///   - text: text
@@ -35,11 +35,5 @@ class TeamListWireframe: BaseWireframe, TeamListWireframeContract {
         self.loadingDelegate?.dismiss {
             completion()
         }
-    }
-    
-    func showDetailTeamView(team: Team) {
-        let detailModule = TeamDetailBuilder.build(team: team)
-        self.presentView(from: self.view, useCase: detailModule,
-                         withTransition: .modal, completion: nil)
     }
 }

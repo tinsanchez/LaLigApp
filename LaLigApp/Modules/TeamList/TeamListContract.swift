@@ -50,8 +50,7 @@ protocol TeamListWireframeContract: BaseWireframe {
     
     func showBasicLoading(text: String)
     func hideBasicLoading(completion: @escaping (() -> Void))
-    
-    // TODO: func showDetailTeamView(team: Team)
+    func showDetailTeamView(team: Team)
 }
 
 protocol TeamListWireframeOutputContract: class {

@@ -34,12 +34,22 @@
 		9C22A2CB25FCCED90033CDD5 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C22A2CA25FCCED90033CDD5 /* Team.swift */; };
 		9C22A2D225FCD7C70033CDD5 /* TeamListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C22A2D125FCD7C70033CDD5 /* TeamListTableViewCell.xib */; };
 		9C22A2D525FCD7DA0033CDD5 /* TeamListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C22A2D425FCD7DA0033CDD5 /* TeamListTableViewCell.swift */; };
+		9C81C3ED25FF82E90031D7E9 /* TeamDetailContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81C3E525FF82E90031D7E9 /* TeamDetailContract.swift */; };
+		9C81C3EE25FF82E90031D7E9 /* TeamDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81C3E625FF82E90031D7E9 /* TeamDetailPresenter.swift */; };
+		9C81C3EF25FF82E90031D7E9 /* TeamDetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81C3E725FF82E90031D7E9 /* TeamDetailBuilder.swift */; };
+		9C81C3F025FF82E90031D7E9 /* TeamDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81C3E825FF82E90031D7E9 /* TeamDetailInteractor.swift */; };
+		9C81C3F125FF82E90031D7E9 /* TeamDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81C3E925FF82E90031D7E9 /* TeamDetailView.swift */; };
+		9C81C3F225FF82E90031D7E9 /* TeamDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C81C3EA25FF82E90031D7E9 /* TeamDetailView.xib */; };
+		9C81C3F325FF82E90031D7E9 /* TeamDetailEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81C3EB25FF82E90031D7E9 /* TeamDetailEntity.swift */; };
+		9C81C3F425FF82E90031D7E9 /* TeamDetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81C3EC25FF82E90031D7E9 /* TeamDetailWireframe.swift */; };
+		9C81C41425FFE5B30031D7E9 /* Pods_LaLigApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7083BFFD9DAE66B56EA0791D /* Pods_LaLigApp.framework */; };
+		9C81C41F2600C4980031D7E9 /* DetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C81C41E2600C4980031D7E9 /* DetailTableViewCell.xib */; };
+		9C81C4222600C4C50031D7E9 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81C4212600C4C50031D7E9 /* DetailTableViewCell.swift */; };
 		9CF2097425F97C840074BD7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF2097325F97C840074BD7D /* AppDelegate.swift */; };
 		9CF2097625F97C840074BD7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF2097525F97C840074BD7D /* SceneDelegate.swift */; };
 		9CF2097825F97C840074BD7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF2097725F97C840074BD7D /* ViewController.swift */; };
 		9CF2097D25F97C840074BD7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CF2097C25F97C840074BD7D /* Assets.xcassets */; };
 		9CF2098025F97C840074BD7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CF2097E25F97C840074BD7D /* LaunchScreen.storyboard */; };
-		FA2ED1CBCAC8BBCEE5BDB7B4 /* Pods_LaLigApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7083BFFD9DAE66B56EA0791D /* Pods_LaLigApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +87,16 @@
 		9C22A2CA25FCCED90033CDD5 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		9C22A2D125FCD7C70033CDD5 /* TeamListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamListTableViewCell.xib; sourceTree = "<group>"; };
 		9C22A2D425FCD7DA0033CDD5 /* TeamListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListTableViewCell.swift; sourceTree = "<group>"; };
+		9C81C3E525FF82E90031D7E9 /* TeamDetailContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailContract.swift; sourceTree = "<group>"; };
+		9C81C3E625FF82E90031D7E9 /* TeamDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailPresenter.swift; sourceTree = "<group>"; };
+		9C81C3E725FF82E90031D7E9 /* TeamDetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailBuilder.swift; sourceTree = "<group>"; };
+		9C81C3E825FF82E90031D7E9 /* TeamDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailInteractor.swift; sourceTree = "<group>"; };
+		9C81C3E925FF82E90031D7E9 /* TeamDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailView.swift; sourceTree = "<group>"; };
+		9C81C3EA25FF82E90031D7E9 /* TeamDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamDetailView.xib; sourceTree = "<group>"; };
+		9C81C3EB25FF82E90031D7E9 /* TeamDetailEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailEntity.swift; sourceTree = "<group>"; };
+		9C81C3EC25FF82E90031D7E9 /* TeamDetailWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailWireframe.swift; sourceTree = "<group>"; };
+		9C81C41E2600C4980031D7E9 /* DetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTableViewCell.xib; sourceTree = "<group>"; };
+		9C81C4212600C4C50031D7E9 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		9CF2097025F97C840074BD7D /* LaLigApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaLigApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CF2097325F97C840074BD7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CF2097525F97C840074BD7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,7 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA2ED1CBCAC8BBCEE5BDB7B4 /* Pods_LaLigApp.framework in Frameworks */,
+				9C81C41425FFE5B30031D7E9 /* Pods_LaLigApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				9C22A24F25FA9FFA0033CDD5 /* BASE */,
+				9C81C3F625FF82F00031D7E9 /* TeamDetail */,
 				9C22A2A925FBEFA70033CDD5 /* TeamList */,
 			);
 			path = Modules;
@@ -244,6 +265,39 @@
 			path = TeamCell;
 			sourceTree = "<group>";
 		};
+		9C81C3F625FF82F00031D7E9 /* TeamDetail */ = {
+			isa = PBXGroup;
+			children = (
+				9C81C3F825FF83450031D7E9 /* UI */,
+				9C81C3E525FF82E90031D7E9 /* TeamDetailContract.swift */,
+				9C81C3E625FF82E90031D7E9 /* TeamDetailPresenter.swift */,
+				9C81C3E725FF82E90031D7E9 /* TeamDetailBuilder.swift */,
+				9C81C3E825FF82E90031D7E9 /* TeamDetailInteractor.swift */,
+				9C81C3E925FF82E90031D7E9 /* TeamDetailView.swift */,
+				9C81C3EB25FF82E90031D7E9 /* TeamDetailEntity.swift */,
+				9C81C3EC25FF82E90031D7E9 /* TeamDetailWireframe.swift */,
+			);
+			path = TeamDetail;
+			sourceTree = "<group>";
+		};
+		9C81C3F825FF83450031D7E9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9C81C41D2600C4620031D7E9 /* DetailTableViewCell */,
+				9C81C3EA25FF82E90031D7E9 /* TeamDetailView.xib */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		9C81C41D2600C4620031D7E9 /* DetailTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				9C81C41E2600C4980031D7E9 /* DetailTableViewCell.xib */,
+				9C81C4212600C4C50031D7E9 /* DetailTableViewCell.swift */,
+			);
+			path = DetailTableViewCell;
+			sourceTree = "<group>";
+		};
 		9CF2096725F97C840074BD7D = {
 			isa = PBXGroup;
 			children = (
@@ -265,14 +319,14 @@
 		9CF2097225F97C840074BD7D /* LaLigApp */ = {
 			isa = PBXGroup;
 			children = (
-				9C22A2AC25FBF11E0033CDD5 /* Components */,
-				9C22A27F25FBDC680033CDD5 /* Extensions */,
 				9CF2097325F97C840074BD7D /* AppDelegate.swift */,
 				9CF2097525F97C840074BD7D /* SceneDelegate.swift */,
 				9CF2097725F97C840074BD7D /* ViewController.swift */,
 				9CF2097C25F97C840074BD7D /* Assets.xcassets */,
-				9C22A21C25FA30BF0033CDD5 /* Configuration */,
 				9CF2097E25F97C840074BD7D /* LaunchScreen.storyboard */,
+				9C22A2AC25FBF11E0033CDD5 /* Components */,
+				9C22A27F25FBDC680033CDD5 /* Extensions */,
+				9C22A21C25FA30BF0033CDD5 /* Configuration */,
 				9C22A23A25FA43500033CDD5 /* Models */,
 				9C22A23B25FA435F0033CDD5 /* Modules */,
 				9C22A23C25FA43A10033CDD5 /* Providers */,
@@ -312,8 +366,8 @@
 				9CF2096C25F97C840074BD7D /* Sources */,
 				9CF2096D25F97C840074BD7D /* Frameworks */,
 				9CF2096E25F97C840074BD7D /* Resources */,
-				9CF2098825F97C930074BD7D /* Run Swiftlint */,
 				A6BCD00ADBEDEFF8BAB1E191 /* [CP] Embed Pods Frameworks */,
+				9CF2098825F97C930074BD7D /* Run Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -361,10 +415,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C81C3F225FF82E90031D7E9 /* TeamDetailView.xib in Resources */,
 				9C22A2A525FBEF9E0033CDD5 /* TeamListView.xib in Resources */,
 				9C22A2D225FCD7C70033CDD5 /* TeamListTableViewCell.xib in Resources */,
 				9C22A2B725FBF2C60033CDD5 /* LoadingView.xib in Resources */,
 				9CF2098025F97C840074BD7D /* LaunchScreen.storyboard in Resources */,
+				9C81C41F2600C4980031D7E9 /* DetailTableViewCell.xib in Resources */,
 				9CF2097D25F97C840074BD7D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,18 +496,26 @@
 				9CF2097825F97C840074BD7D /* ViewController.swift in Sources */,
 				9C22A2CB25FCCED90033CDD5 /* Team.swift in Sources */,
 				9C22A2C125FCCD460033CDD5 /* BaseNetworkProvider.swift in Sources */,
+				9C81C3F125FF82E90031D7E9 /* TeamDetailView.swift in Sources */,
 				9C22A27825FAA1840033CDD5 /* BaseWireframe.swift in Sources */,
+				9C81C3F025FF82E90031D7E9 /* TeamDetailInteractor.swift in Sources */,
 				9C22A2BE25FCCB660033CDD5 /* NetworkConstants.swift in Sources */,
 				9C22A2A025FBEF9E0033CDD5 /* TeamListContract.swift in Sources */,
 				9C22A2A725FBEF9E0033CDD5 /* TeamListWireframe.swift in Sources */,
 				9C22A28525FBE4690033CDD5 /* UIViewControllerExtension.swift in Sources */,
+				9C81C3EF25FF82E90031D7E9 /* TeamDetailBuilder.swift in Sources */,
 				9C22A27725FAA1840033CDD5 /* BaseEntity.swift in Sources */,
 				9C22A2D525FCD7DA0033CDD5 /* TeamListTableViewCell.swift in Sources */,
+				9C81C3EE25FF82E90031D7E9 /* TeamDetailPresenter.swift in Sources */,
 				9C22A27225FAA1840033CDD5 /* BasePresenter.swift in Sources */,
 				9CF2097425F97C840074BD7D /* AppDelegate.swift in Sources */,
 				9C22A28825FBE49D0033CDD5 /* UIImageViewExtension.swift in Sources */,
+				9C81C3F425FF82E90031D7E9 /* TeamDetailWireframe.swift in Sources */,
 				9C22A28125FBDC880033CDD5 /* StringExtension.swift in Sources */,
+				9C81C3ED25FF82E90031D7E9 /* TeamDetailContract.swift in Sources */,
 				9CF2097625F97C840074BD7D /* SceneDelegate.swift in Sources */,
+				9C81C3F325FF82E90031D7E9 /* TeamDetailEntity.swift in Sources */,
+				9C81C4222600C4C50031D7E9 /* DetailTableViewCell.swift in Sources */,
 				9C22A2A225FBEF9E0033CDD5 /* TeamListBuilder.swift in Sources */,
 				9C22A2A125FBEF9E0033CDD5 /* TeamListPresenter.swift in Sources */,
 				9C22A27425FAA1840033CDD5 /* BaseInteractor.swift in Sources */,
@@ -518,6 +582,16 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/LanguageManager-iOS\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ObjectMapper\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/PromiseKit\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SnapKit\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftSVG\"",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -600,6 +674,16 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/LanguageManager-iOS\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ObjectMapper\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/PromiseKit\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SnapKit\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftSVG\"",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -676,6 +760,16 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/LanguageManager-iOS\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ObjectMapper\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/PromiseKit\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SnapKit\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftSVG\"",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -738,6 +832,16 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/LanguageManager-iOS\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ObjectMapper\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/PromiseKit\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SnapKit\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftSVG\"",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

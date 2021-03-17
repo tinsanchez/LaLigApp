@@ -45,6 +45,7 @@ class TeamListView: BaseViewController, TeamListViewContract {
     
     // MARK: - Private methods
     private func setupView() {
+        // Associate xib table view cell with table view
         tableView.register(UINib(nibName: TeamListTableViewCell.cellId, bundle: nil),
                            forCellReuseIdentifier: TeamListTableViewCell.cellId)
         
@@ -82,7 +83,7 @@ class TeamListDelegate: NSObject, UITableViewDelegate {
     weak var presenter: TeamListPresenterContract!
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // presenter.selectTeamCell(index: indexPath.item)
+        presenter.selectTeamCell(index: indexPath.item)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

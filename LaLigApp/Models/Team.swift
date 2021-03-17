@@ -11,29 +11,23 @@ struct Team {
     var imageThumb: String
     var name: String
     var fav: Bool = false
-    var height: Double
-    var weight: Double
-    var types: [String]
+    var clubColors: String
+    var shortName: String
+    var website: String
+    var venue: String
+    var founded: Int
 
     init(teamDAO: TeamDAO) {
         name = teamDAO.name
-        if !teamDAO.imagesURL.isEmpty,
-           let defaultFront = teamDAO.imagesURL[TeamDAO.defaultFront] as? String {
-            imageThumb = defaultFront
+        if !teamDAO.imagesURL.isEmpty {
+            imageThumb = teamDAO.imagesURL
         } else {
             imageThumb = ""
         }
-        height = teamDAO.height
-        weight = teamDAO.weight
-        let typesString = teamDAO.types.map { element -> String? in
-            if let type = element["type"] as? [String: String],
-               let nameType = type["name"] {
-                return nameType
-            } else {
-                return nil
-            }
-        }
-
-        types = typesString.compactMap { $0 }
+        clubColors = teamDAO.clubColors
+        shortName = teamDAO.shortName
+        website = teamDAO.website
+        venue = teamDAO.venue
+        founded = teamDAO.founded
     }
 }
