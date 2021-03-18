@@ -6,8 +6,11 @@
 //
 
 import Foundation
+import CoreLocation
+import PromiseKit
 
 struct Team {
+    
     var imageThumb: String
     var name: String
     var fav: Bool = false

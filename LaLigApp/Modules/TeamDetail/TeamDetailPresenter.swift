@@ -8,6 +8,8 @@
 //
 
 import Foundation
+import PromiseKit
+import CoreLocation
 
 class TeamDetailPresenter: BasePresenter, TeamDetailPresenterContract {
 
@@ -23,6 +25,29 @@ class TeamDetailPresenter: BasePresenter, TeamDetailPresenterContract {
     func viewWillAppear() {
         let teamData = interactor.getTeamData()
         view.reloadViewWithData(team: teamData)
+    }
+    
+    func openMapForPlace() {
+        let team = interactor.getTeamData()
+        self.coordinates(forAddress: team.address) { [self] (location) in
+            guard let location = location else {
+                    print("No ha sido posible hacer el casting de String a coordenadas")
+                    return
+            }
+            self.wireframe.openMapForPlace(latTeam: location.latitude, longTeam: location.longitude)
+        }
+    }
+    
+    func coordinates(forAddress address: String, completion: @escaping (CLLocationCoordinate2D?) -> Void) {
+        let geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(address) { (placemarks, error) in
+            guard error == nil else {
+                print("Geocoding error: \(error!)")
+                completion(nil)
+                return
+            }
+            completion(placemarks?.first?.location?.coordinate)
+        }
     }
 }
 

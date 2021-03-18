@@ -73,5 +73,7 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We will show you the venue in maps. Please allow your location</string>
 </dict>
 </plist>

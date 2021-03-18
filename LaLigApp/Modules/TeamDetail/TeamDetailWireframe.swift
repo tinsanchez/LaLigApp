@@ -9,6 +9,8 @@
 
 import Foundation
 import UIKit
+import CoreLocation
+import MapKit
 
 class TeamDetailWireframe: BaseWireframe, TeamDetailWireframeContract {
     
@@ -35,5 +37,23 @@ class TeamDetailWireframe: BaseWireframe, TeamDetailWireframeContract {
         self.loadingDelegate?.dismiss {
             completion()
         }
+    }
+    
+    func openMapForPlace(latTeam: Double, longTeam: Double) {
+        let latitude: CLLocationDegrees = latTeam
+        let longitude: CLLocationDegrees = longTeam
+
+        let regionDistance: CLLocationDistance = 100
+        let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
+        let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance,
+                                            longitudinalMeters: regionDistance)
+        let options = [
+            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+        ]
+        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = ""
+        mapItem.openInMaps(launchOptions: options)
     }
 }

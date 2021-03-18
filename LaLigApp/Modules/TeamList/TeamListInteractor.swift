@@ -28,6 +28,8 @@ class TeamListInteractor: BaseInteractor, TeamListInteractorContract {
                 let teamsList = teamsDAOList.map { Team(teamDAO: $0)}
                 let teamsListSorted = teamsList.sorted(by: { $0.name < $1.name })
                 promise.fulfill(teamsListSorted)
+            }.catch { error in
+                print(error)
             }
         }
     }

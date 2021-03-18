@@ -8,6 +8,7 @@
 //
 
 import UIKit
+import SwiftSVG
 
 class TeamDetailView: BaseViewController, TeamDetailViewContract {
 
@@ -16,9 +17,9 @@ class TeamDetailView: BaseViewController, TeamDetailViewContract {
     @IBOutlet weak var teamImageView: UIView!
     @IBOutlet weak var detailtableView: UITableView!
     
-    var datasource: TeamDetailDataSource!
+    var datasource: TeamDetailTableDataSource!
     // swiftlint:disable:next weak_delegate
-    var delegate: TeamDetailDelegate!
+    var delegate: TeamDetailTableDelegate!
 
 	// MARK: - LifeCycle
     override func viewDidLoad() {
@@ -35,8 +36,8 @@ class TeamDetailView: BaseViewController, TeamDetailViewContract {
     private func setupView() {
         detailtableView.register(UINib(nibName: DetailTableViewCell.cellId, bundle: nil),
                                  forCellReuseIdentifier: DetailTableViewCell.cellId)
-        datasource = TeamDetailDataSource()
-        delegate = TeamDetailDelegate()
+        datasource = TeamDetailTableDataSource()
+        delegate = TeamDetailTableDelegate()
         detailtableView.overrideUserInterfaceStyle = .light
         detailtableView.dataSource = datasource
         detailtableView.delegate = delegate
@@ -66,7 +67,7 @@ class TeamDetailView: BaseViewController, TeamDetailViewContract {
         // MARK: Implementado "sorted" para devolverlo ordenado en la misma
         // posisión siempre. Como devuelve un Array, he tenido que cambiar el
         // resultado de la función, así como en el DataSource la manera de setear
-        // los datos en la tabla. No me he planteado
+        // los datos en la tabla.
         let teamDataSorted = teamData.sorted(by: { $0.key < $1.key })
        
         return teamDataSorted
@@ -76,9 +77,13 @@ class TeamDetailView: BaseViewController, TeamDetailViewContract {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func venueLocationPressed(_ sender: UIButton) {
+        presenter.openMapForPlace()
+    }
+    
 }
 
-class TeamDetailDataSource: NSObject, UITableViewDataSource {
+class TeamDetailTableDataSource: NSObject, UITableViewDataSource {
     
     var teamData: [(key: String, value: String)]!
 
@@ -99,6 +104,6 @@ class TeamDetailDataSource: NSObject, UITableViewDataSource {
 
 }
 
-class TeamDetailDelegate: NSObject, UITableViewDelegate {
+class TeamDetailTableDelegate: NSObject, UITableViewDelegate {
 
 }

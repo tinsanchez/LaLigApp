@@ -40,6 +40,8 @@ class TeamNetworkProvider: BaseNetworkProvider, TeamProviderContract {
                     }
                 }
                 promise.fulfill(teamPromise)
+            }.catch { error in
+                print(error)
             }
         }
     }
