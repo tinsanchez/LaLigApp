@@ -18,6 +18,7 @@ struct TeamDAO: ImmutableMappable {
     let website: String
     let venue: String
     let founded: Int
+    let address: String
 
     init(map: Map) throws {
         id = try map.value("id")
@@ -28,6 +29,7 @@ struct TeamDAO: ImmutableMappable {
         website = try map.value("website")
         venue = try map.value("venue")
         founded = try map.value("founded")
+        address = try map.value("address")
     }
 
     func mapping(map: Map) {
@@ -39,5 +41,6 @@ struct TeamDAO: ImmutableMappable {
         website >>> map["website"]
         venue >>> map["venue"]
         founded >>> map["founded"]
+        address >>> map["address"]
     }
 }

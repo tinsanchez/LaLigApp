@@ -1,5 +1,5 @@
 //
-//  BaseView.swift
+//  BasePresenter.swift
 //  LaLigApp
 //
 //  Created by Valentín Sánchez Campañón on 11/3/21.
@@ -7,12 +7,8 @@
 //
 //
 
-import UIKit
+import Foundation
 
-class BaseViewController: UIViewController {
+class BasePresenter {
 
-}
-
-class BaseTabBarController: UITabBarController {
-    
 }

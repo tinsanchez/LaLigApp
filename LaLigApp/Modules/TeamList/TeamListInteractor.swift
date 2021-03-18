@@ -26,7 +26,8 @@ class TeamListInteractor: BaseInteractor, TeamListInteractorContract {
                 self.teamProvider.getTeams()
             }.done { teamsDAOList in
                 let teamsList = teamsDAOList.map { Team(teamDAO: $0)}
-                promise.fulfill(teamsList)
+                let teamsListSorted = teamsList.sorted(by: { $0.name < $1.name })
+                promise.fulfill(teamsListSorted)
             }
         }
     }

@@ -25,6 +25,7 @@ class TeamListTableViewCell: UITableViewCell {
     
     func setUpData(team: Team) {
         if let url = URL(string: team.imageThumb) {
+            // MARK: Utilización del Framework SwiftSVG puesto que la url de donde rescato la imagen es formato SVG.
             _ = UIView(SVGURL: url) { svglayer in
                 svglayer.resizeToFit(self.cellImageView.bounds)
                 self.cellImageView.layer.addSublayer(svglayer)

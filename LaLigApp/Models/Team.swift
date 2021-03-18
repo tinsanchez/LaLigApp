@@ -16,6 +16,7 @@ struct Team {
     var website: String
     var venue: String
     var founded: Int
+    var address: String
 
     init(teamDAO: TeamDAO) {
         name = teamDAO.name
@@ -29,5 +30,6 @@ struct Team {
         website = teamDAO.website
         venue = teamDAO.venue
         founded = teamDAO.founded
+        address = teamDAO.address
     }
 }

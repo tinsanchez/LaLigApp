@@ -13,6 +13,7 @@ class TeamDetailBuilder {
 
     static func build(team: Team) -> TeamDetailView {
         let view = TeamDetailView.init(nibName: String(describing: TeamDetailView.self), bundle: nil)
+        
         let presenter = TeamDetailPresenter()
         let entity = TeamDetailEntity()
         let wireframe = TeamDetailWireframe()

@@ -15,4 +15,4 @@ APP_ENVIRONMENT=Production
 
 // App Settings
 APP_NAME = LaLigApp (poduc)
-APP_BUNDLE_ID = com.none.LaLigApp.pro
+PRODUCT_BUNDLE_IDENTIFIER = com.none.LaLigApp.pro

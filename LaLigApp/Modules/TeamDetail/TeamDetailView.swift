@@ -15,7 +15,6 @@ class TeamDetailView: BaseViewController, TeamDetailViewContract {
     
     @IBOutlet weak var teamImageView: UIView!
     @IBOutlet weak var detailtableView: UITableView!
-    @IBOutlet weak var detailTabBar: UITabBar!
     
     var datasource: TeamDetailDataSource!
     // swiftlint:disable:next weak_delegate
@@ -38,6 +37,7 @@ class TeamDetailView: BaseViewController, TeamDetailViewContract {
                                  forCellReuseIdentifier: DetailTableViewCell.cellId)
         datasource = TeamDetailDataSource()
         delegate = TeamDetailDelegate()
+        detailtableView.overrideUserInterfaceStyle = .light
         detailtableView.dataSource = datasource
         detailtableView.delegate = delegate
     }
@@ -62,12 +62,20 @@ class TeamDetailView: BaseViewController, TeamDetailViewContract {
         teamData["Venue:"] = team.venue
         teamData["Clubcolors:"] = team.clubColors
         teamData["Website:"] = team.website
-        // MARK: Implementado "sorted" para devolverlo ordenado en la misma posisión siempre.
+        
+        // MARK: Implementado "sorted" para devolverlo ordenado en la misma
+        // posisión siempre. Como devuelve un Array, he tenido que cambiar el
+        // resultado de la función, así como en el DataSource la manera de setear
+        // los datos en la tabla. No me he planteado
         let teamDataSorted = teamData.sorted(by: { $0.key < $1.key })
        
         return teamDataSorted
     }
-
+    
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
 
 class TeamDetailDataSource: NSObject, UITableViewDataSource {
