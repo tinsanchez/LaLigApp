@@ -78,9 +78,8 @@ class TeamDetailView: BaseViewController, TeamDetailViewContract {
     }
     
     @IBAction func venueLocationPressed(_ sender: UIButton) {
-        presenter.openMapForPlace()
+        presenter.convertStringToLocation()
     }
-    
 }
 
 class TeamDetailTableDataSource: NSObject, UITableViewDataSource {
@@ -101,9 +100,7 @@ class TeamDetailTableDataSource: NSObject, UITableViewDataSource {
 
         return cell
     }
-
 }
 
 class TeamDetailTableDelegate: NSObject, UITableViewDelegate {
-
 }

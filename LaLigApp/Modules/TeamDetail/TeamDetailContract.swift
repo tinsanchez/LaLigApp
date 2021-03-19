@@ -28,7 +28,7 @@ protocol TeamDetailPresenterContract: BasePresenter {
 
     func viewDidLoad()
     func viewWillAppear()
-    func openMapForPlace()
+    func convertStringToLocation()
 }
 
 protocol TeamDetailInteractorContract: BaseInteractor {
@@ -46,7 +46,7 @@ protocol TeamDetailWireframeContract: BaseWireframe {
     
     func showBasicLoading(text: String)
     func hideBasicLoading(completion: @escaping (() -> Void))
-    func openMapForPlace(latTeam: Double, longTeam: Double)
+    func openMapForPlace(latTeam: Double, longTeam: Double, name: String)
 }
 
 protocol TeamDetailWireframeOutputContract: class {

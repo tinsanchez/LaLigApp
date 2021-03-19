@@ -27,18 +27,18 @@ class TeamDetailPresenter: BasePresenter, TeamDetailPresenterContract {
         view.reloadViewWithData(team: teamData)
     }
     
-    func openMapForPlace() {
+    func convertStringToLocation() {
         let team = interactor.getTeamData()
         self.coordinates(forAddress: team.address) { [self] (location) in
             guard let location = location else {
                     print("No ha sido posible hacer el casting de String a coordenadas")
                     return
             }
-            self.wireframe.openMapForPlace(latTeam: location.latitude, longTeam: location.longitude)
+            self.wireframe.openMapForPlace(latTeam: location.latitude, longTeam: location.longitude, name: team.venue)
         }
     }
     
-    func coordinates(forAddress address: String, completion: @escaping (CLLocationCoordinate2D?) -> Void) {
+    private func coordinates(forAddress address: String, completion: @escaping (CLLocationCoordinate2D?) -> Void) {
         let geocoder = CLGeocoder()
         geocoder.geocodeAddressString(address) { (placemarks, error) in
             guard error == nil else {

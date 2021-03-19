@@ -39,7 +39,7 @@ class TeamDetailWireframe: BaseWireframe, TeamDetailWireframeContract {
         }
     }
     
-    func openMapForPlace(latTeam: Double, longTeam: Double) {
+    func openMapForPlace(latTeam: Double, longTeam: Double, name: String) {
         let latitude: CLLocationDegrees = latTeam
         let longitude: CLLocationDegrees = longTeam
 
@@ -53,7 +53,7 @@ class TeamDetailWireframe: BaseWireframe, TeamDetailWireframeContract {
         ]
         let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
         let mapItem = MKMapItem(placemark: placemark)
-        mapItem.name = ""
+        mapItem.name = name
         mapItem.openInMaps(launchOptions: options)
     }
 }

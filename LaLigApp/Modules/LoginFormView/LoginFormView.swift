@@ -13,7 +13,20 @@ class LoginFormView: BaseViewController, LoginFormViewContract {
 
 	var presenter: LoginFormPresenterContract!
 
-	// MARK: - LifeCycle
+    @IBOutlet weak var nameTextfield: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var repeatEmailTexfield: UITextField!
+    @IBOutlet weak var passwordTextfield: UITextField!
+    @IBOutlet weak var repeatPasswordTextfield: UITextField!
+    @IBOutlet weak var acceptTermsSwitch: UISwitch!
+    @IBOutlet weak var acceptTermsLabel: UILabel!
+    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
+    
+    // swiftlint:disable:next weak_delegate
+    private var textFieldsDelegate: UITextFieldDelegate! = LoginFormTextFieldDelegate()
+    
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
@@ -26,6 +39,35 @@ class LoginFormView: BaseViewController, LoginFormViewContract {
     }
 
     private func setupView() {
+        nameTextfield.tag = 0
+        nameTextfield.delegate = textFieldsDelegate
+        emailTextField.tag = 1
+        emailTextField.delegate = textFieldsDelegate
+        repeatEmailTexfield.tag = 2
+        repeatEmailTexfield.delegate = textFieldsDelegate
+        passwordTextfield.tag = 3
+        passwordTextfield.delegate = textFieldsDelegate
+        repeatPasswordTextfield.tag = 4
+        repeatPasswordTextfield.delegate = textFieldsDelegate
 
+    }
+    @IBAction func aceptedTermPressed(_ sender: UISwitch) {
+    }
+    @IBAction func registerPressedButton(_ sender: UIButton) {
+    }
+    @IBAction func loginPressedButton(_ sender: UIButton) {
+    }
+}
+
+class LoginFormTextFieldDelegate: NSObject, UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        let nextTag = textField.tag + 1
+        if let nextTextField = textField.superview?.viewWithTag(nextTag) {
+            nextTextField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+
+        return true
     }
 }

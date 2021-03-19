@@ -1,24 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light" />
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginFormView" customModule="VIPER" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginFormView" customModule="LaLigApp" customModuleProvider="target">
             <connections>
+                <outlet property="acceptTermsLabel" destination="GPA-ri-t9N" id="B5N-at-gbO"/>
+                <outlet property="acceptTermsSwitch" destination="V8a-yI-bS6" id="aMa-BB-2hF"/>
+                <outlet property="emailTextField" destination="wVf-wc-skR" id="1we-UI-ous"/>
+                <outlet property="loginButton" destination="mJz-JQ-EUe" id="BBY-VE-Rkf"/>
+                <outlet property="nameTextfield" destination="qsm-ha-vff" id="WpY-pu-4D9"/>
+                <outlet property="passwordTextfield" destination="FmK-pa-FfN" id="SHD-GK-nSR"/>
+                <outlet property="registerButton" destination="Sow-1w-dP0" id="V5d-9s-w69"/>
+                <outlet property="repeatEmailTexfield" destination="jb5-SS-iF0" id="GB8-HR-dLw"/>
+                <outlet property="repeatPasswordTextfield" destination="Q56-GW-nIF" id="NmF-Ex-1IA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="RoX-f0-UQi">
+                    <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8ZW-mn-qHw">
+                    <rect key="frame" x="50" y="218" width="290" height="408"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full name" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="qsm-ha-vff">
+                            <rect key="frame" x="0.0" y="0.0" width="290" height="34"/>
+                            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="next" textContentType="name"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="wVf-wc-skR">
+                            <rect key="frame" x="0.0" y="54" width="290" height="34"/>
+                            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repeat email" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="jb5-SS-iF0">
+                            <rect key="frame" x="0.0" y="108" width="290" height="34"/>
+                            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="FmK-pa-FfN">
+                            <rect key="frame" x="0.0" y="162" width="290" height="34"/>
+                            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="new-password"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repeat password" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="Q56-GW-nIF">
+                            <rect key="frame" x="0.0" y="216" width="290" height="34"/>
+                            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
+                        </textField>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="v4n-YE-Ufd">
+                            <rect key="frame" x="0.0" y="270" width="290" height="31"/>
+                            <subviews>
+                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="V8a-yI-bS6">
+                                    <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                    <color key="onTintColor" red="0.76717036959999996" green="0.74696940180000004" blue="0.57707846159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <action selector="aceptedTermPressed:" destination="-1" eventType="valueChanged" id="Fmu-VY-uBn"/>
+                                    </connections>
+                                </switch>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accept terms and conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPA-ri-t9N">
+                                    <rect key="frame" x="65" y="7" width="225" height="17.333333333333332"/>
+                                    <fontDescription key="fontDescription" name="GillSans-Italic" family="Gill Sans" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Wo6-HY-vwG">
+                            <rect key="frame" x="0.0" y="321" width="290" height="87"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sow-1w-dP0">
+                                    <rect key="frame" x="0.0" y="0.0" width="290" height="36"/>
+                                    <color key="backgroundColor" red="0.73091322179999996" green="0.72142767910000005" blue="0.53884303570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" name="GillSans-SemiBoldItalic" family="Gill Sans" pointSize="20"/>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Register"/>
+                                    <connections>
+                                        <action selector="registerPressedButton:" destination="-1" eventType="touchUpInside" id="jBp-cP-bh0"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mJz-JQ-EUe">
+                                    <rect key="frame" x="0.0" y="51" width="290" height="36"/>
+                                    <color key="backgroundColor" red="0.52389627699999997" green="0.52140784259999995" blue="0.49098515510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" name="GillSans-SemiBoldItalic" family="Gill Sans" pointSize="20"/>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Login"/>
+                                    <connections>
+                                        <action selector="loginPressedButton:" destination="-1" eventType="touchUpInside" id="QHE-WD-kLF"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="tAt-aP-EcC"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="8ZW-mn-qHw" firstAttribute="leading" secondItem="tAt-aP-EcC" secondAttribute="leading" constant="50" id="B2S-tK-TBq"/>
+                <constraint firstItem="RoX-f0-UQi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="FKn-cg-bD1"/>
+                <constraint firstItem="8ZW-mn-qHw" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="L5a-az-04S"/>
+                <constraint firstAttribute="trailing" secondItem="RoX-f0-UQi" secondAttribute="trailing" id="Nr4-95-kUo"/>
+                <constraint firstAttribute="bottom" secondItem="RoX-f0-UQi" secondAttribute="bottom" id="XhN-8P-SzO"/>
+                <constraint firstItem="8ZW-mn-qHw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="cO7-7A-p9T"/>
+                <constraint firstItem="tAt-aP-EcC" firstAttribute="trailing" secondItem="8ZW-mn-qHw" secondAttribute="trailing" constant="50" id="sdT-HD-qIN"/>
+                <constraint firstItem="RoX-f0-UQi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="um6-Y3-DOU"/>
+            </constraints>
+            <point key="canvasLocation" x="102.89855072463769" y="55.580357142857139"/>
         </view>
     </objects>
+    <resources>
+        <image name="loginBackgroundImage" width="292.66665649414062" height="422"/>
+    </resources>
 </document>
