@@ -25,13 +25,21 @@ protocol LoginFormPresenterContract: BasePresenter {
     var interactor: LoginFormInteractorContract! { get set }
     var entity: LoginFormEntityContract! { get set }
     var wireframe: LoginFormWireframeContract! { get set }
+    
 
     func viewDidLoad()
     func viewWillAppear()
+    func showNoTermsAcceptAlert()
+    func showNoPasswordMatchAlert()
+    func sendAction(email: String, password: String)
 }
 
 protocol LoginFormInteractorContract: BaseInteractor {
     var output: LoginFormInteractorOutputContract! {get set}
+    
+    init(loginProvider: LoginFormProviderContract)
+
+    func sendLoginData(email: String, password: String) -> Promise<Void>
 }
 
 protocol LoginFormInteractorOutputContract: class {

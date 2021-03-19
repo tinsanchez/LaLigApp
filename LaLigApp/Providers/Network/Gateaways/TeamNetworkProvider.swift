@@ -33,9 +33,7 @@ class TeamNetworkProvider: BaseNetworkProvider, TeamProviderContract {
         return Promise<[TeamDAO]> { promise in
             self.getInitialPage().done { initialPage in
                 for element in initialPage {
-                     print(element)
                     if let teamDAO = try? TeamDAO(JSON: element) {
-                        // print(teamDAO)
                         teamPromise.append(teamDAO)
                     }
                 }

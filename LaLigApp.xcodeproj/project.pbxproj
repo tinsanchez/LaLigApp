@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C11E7ED260535A800BE6763 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C11E7EC260535A800BE6763 /* GoogleService-Info.plist */; };
 		9C22A27225FAA1840033CDD5 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C22A26A25FAA1840033CDD5 /* BasePresenter.swift */; };
 		9C22A27425FAA1840033CDD5 /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C22A26C25FAA1840033CDD5 /* BaseInteractor.swift */; };
 		9C22A27525FAA1840033CDD5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C22A26D25FAA1840033CDD5 /* BaseViewController.swift */; };
@@ -39,7 +40,6 @@
 		9C81C3F125FF82E90031D7E9 /* TeamDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81C3E925FF82E90031D7E9 /* TeamDetailView.swift */; };
 		9C81C3F325FF82E90031D7E9 /* TeamDetailEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81C3EB25FF82E90031D7E9 /* TeamDetailEntity.swift */; };
 		9C81C3F425FF82E90031D7E9 /* TeamDetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81C3EC25FF82E90031D7E9 /* TeamDetailWireframe.swift */; };
-		9C81C41425FFE5B30031D7E9 /* Pods_LaLigApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7083BFFD9DAE66B56EA0791D /* Pods_LaLigApp.framework */; };
 		9C81C4222600C4C50031D7E9 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81C4212600C4C50031D7E9 /* DetailTableViewCell.swift */; };
 		9C85F9AD260215F200E33092 /* LoginFormContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C85F9A5260215F200E33092 /* LoginFormContract.swift */; };
 		9C85F9AE260215F200E33092 /* LoginFormPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C85F9A6260215F200E33092 /* LoginFormPresenter.swift */; };
@@ -61,6 +61,7 @@
 		9C85F9E026029E9100E33092 /* TeamDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C85F9E226029E9100E33092 /* TeamDetailView.xib */; };
 		9C85F9E426029EA100E33092 /* TeamListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C85F9E626029EA100E33092 /* TeamListTableViewCell.xib */; };
 		9C85F9E726029EA700E33092 /* TeamListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C85F9E926029EA700E33092 /* TeamListView.xib */; };
+		9C85FA9F2605259100E33092 /* AuthFirebaseNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C85FA9E2605259100E33092 /* AuthFirebaseNetworkProvider.swift */; };
 		9CF2097425F97C840074BD7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF2097325F97C840074BD7D /* AppDelegate.swift */; };
 		9CF2097625F97C840074BD7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF2097525F97C840074BD7D /* SceneDelegate.swift */; };
 		9CF2097825F97C840074BD7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF2097725F97C840074BD7D /* ViewController.swift */; };
@@ -73,7 +74,7 @@
 		2B256532812BF84F9B649C12 /* Pods-LaLigApp.debug (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaLigApp.debug (production).xcconfig"; path = "Target Support Files/Pods-LaLigApp/Pods-LaLigApp.debug (production).xcconfig"; sourceTree = "<group>"; };
 		64A7E591FF0F04F7E8207129 /* Pods-LaLigApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaLigApp.debug.xcconfig"; path = "Target Support Files/Pods-LaLigApp/Pods-LaLigApp.debug.xcconfig"; sourceTree = "<group>"; };
 		674159D0138744684B45BB5D /* Pods-LaLigApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaLigApp.release.xcconfig"; path = "Target Support Files/Pods-LaLigApp/Pods-LaLigApp.release.xcconfig"; sourceTree = "<group>"; };
-		7083BFFD9DAE66B56EA0791D /* Pods_LaLigApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaLigApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C11E7EC260535A800BE6763 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9C22A22125FA38F50033CDD5 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		9C22A22225FA39240033CDD5 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		9C22A26A25FAA1840033CDD5 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
@@ -129,6 +130,8 @@
 		9C85F9E126029E9100E33092 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TeamDetailView.xib; sourceTree = "<group>"; };
 		9C85F9E526029EA100E33092 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TeamListTableViewCell.xib; sourceTree = "<group>"; };
 		9C85F9E826029EA700E33092 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TeamListView.xib; sourceTree = "<group>"; };
+		9C85FA1F2604D0D500E33092 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LoginFormView.strings; sourceTree = "<group>"; };
+		9C85FA9E2605259100E33092 /* AuthFirebaseNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthFirebaseNetworkProvider.swift; path = LaLigApp/Providers/Network/Gateaways/AuthFirebaseNetworkProvider.swift; sourceTree = SOURCE_ROOT; };
 		9CF2097025F97C840074BD7D /* LaLigApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaLigApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CF2097325F97C840074BD7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CF2097525F97C840074BD7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,7 +148,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C81C41425FFE5B30031D7E9 /* Pods_LaLigApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +160,7 @@
 				9C22A22125FA38F50033CDD5 /* Development.xcconfig */,
 				9C22A22225FA39240033CDD5 /* Production.xcconfig */,
 				9CF2098125F97C840074BD7D /* Info.plist */,
+				9C11E7EC260535A800BE6763 /* GoogleService-Info.plist */,
 				9C22A28D25FBE70E0033CDD5 /* Environment.swift */,
 			);
 			path = Configuration;
@@ -269,6 +272,7 @@
 			children = (
 				9C22A2BC25FCC6CF0033CDD5 /* DAO */,
 				9C22A2C325FCCDFB0033CDD5 /* TeamNetworkProvider.swift */,
+				9C85FA9E2605259100E33092 /* AuthFirebaseNetworkProvider.swift */,
 			);
 			path = Gateaways;
 			sourceTree = "<group>";
@@ -417,7 +421,6 @@
 		C261346C1A6C03ACAE7C3182 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7083BFFD9DAE66B56EA0791D /* Pods_LaLigApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -502,6 +505,7 @@
 				9C85F9E426029EA100E33092 /* TeamListTableViewCell.xib in Resources */,
 				9C22A2B725FBF2C60033CDD5 /* LoadingView.xib in Resources */,
 				9CF2098025F97C840074BD7D /* LaunchScreen.storyboard in Resources */,
+				9C11E7ED260535A800BE6763 /* GoogleService-Info.plist in Resources */,
 				9C85F9DC26029E8C00E33092 /* DetailTableViewCell.xib in Resources */,
 				9CF2097D25F97C840074BD7D /* Assets.xcassets in Resources */,
 			);
@@ -605,6 +609,7 @@
 				9C81C3ED25FF82E90031D7E9 /* TeamDetailContract.swift in Sources */,
 				9CF2097625F97C840074BD7D /* SceneDelegate.swift in Sources */,
 				9C85F9C42602161600E33092 /* MenuTapBarEntity.swift in Sources */,
+				9C85FA9F2605259100E33092 /* AuthFirebaseNetworkProvider.swift in Sources */,
 				9C81C3F325FF82E90031D7E9 /* TeamDetailEntity.swift in Sources */,
 				9C81C4222600C4C50031D7E9 /* DetailTableViewCell.swift in Sources */,
 				9C85F9B4260215F200E33092 /* LoginFormWireframe.swift in Sources */,
@@ -633,6 +638,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				9C85F9D526029E7A00E33092 /* Base */,
+				9C85FA1F2604D0D500E33092 /* en */,
 			);
 			name = LoginFormView.xib;
 			sourceTree = "<group>";
@@ -732,7 +738,6 @@
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/LanguageManager-iOS\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/ObjectMapper\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/PromiseKit\"",
-					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/SnapKit\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftSVG\"",
 				);
@@ -824,7 +829,6 @@
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/LanguageManager-iOS\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/ObjectMapper\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/PromiseKit\"",
-					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/SnapKit\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftSVG\"",
 				);
@@ -910,7 +914,6 @@
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/LanguageManager-iOS\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/ObjectMapper\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/PromiseKit\"",
-					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/SnapKit\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftSVG\"",
 				);
@@ -982,7 +985,6 @@
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/LanguageManager-iOS\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/ObjectMapper\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/PromiseKit\"",
-					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/SnapKit\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftSVG\"",
 				);

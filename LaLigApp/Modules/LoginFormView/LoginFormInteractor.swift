@@ -8,13 +8,18 @@
 //
 
 import Foundation
+import PromiseKit
 
 class LoginFormInteractor: BaseInteractor, LoginFormInteractorContract {
     weak var output: LoginFormInteractorOutputContract!
 
-    /*var networkProvider: MyProviderContract
+    var provider: LoginFormProviderContract
     
-    init (provider: MyProviderContract) {
-        self.networkProvider = provider
-    }*/
+    required init (loginProvider: LoginFormProviderContract) {
+        self.provider = loginProvider
+    }
+   
+    func sendLoginData(email: String, password: String) -> Promise<Void> {
+        return provider.sendFormData(email: email, password: password)
+    }
 }

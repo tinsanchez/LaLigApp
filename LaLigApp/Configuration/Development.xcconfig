@@ -7,12 +7,12 @@
 
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
-#include "Pods/Target Support Files/Pods-LaLigApp/Pods-LaLigApp.debug.xcconfig"
-#include "Pods/Target Support Files/Pods-LaLigApp/Pods-LaLigApp.release.xcconfig"
+#include "Pods/Target Support Files/Pods-LaLigApp/Pods-LaLigApp.debug (development).xcconfig"
+#include "Pods/Target Support Files/Pods-LaLigApp/Pods-LaLigApp.release (development).xcconfig"
 
 
 APP_ENVIRONMENT=Development
 
 // App Settings
-PRODUCT_NAME = LaLigApp (Dev)
-PRODUCT_BUNDLE_IDENTIFIER = com.none.LaLigApp.dev
+APP_NAME = LaLigApp (Dev)
+APP_BUNDLE_ID = com.none.LaLigApp.dev

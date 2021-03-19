@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1017931660678-6feblilt9c89us1s0c29ll9mmhb5cvh6.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1017931660678-6feblilt9c89us1s0c29ll9mmhb5cvh6</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAE34Rn0zqLqKGUV3LTHyz4Vg2qsF35hJY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1017931660678</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.tinsanchez.LaLigApp</string>
+	<key>PROJECT_ID</key>
+	<string>laligapp-3190d</string>
+	<key>STORAGE_BUCKET</key>
+	<string>laligapp-3190d.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1017931660678:ios:1c73a5f734e1d56ff70007</string>
+</dict>
+</plist>

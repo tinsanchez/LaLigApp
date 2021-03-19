@@ -20,14 +20,14 @@ class LoginFormBuilder {
         let entity = LoginFormEntity()
         let wireframe = LoginFormWireframe()
         
-        // let provider = MyProvider()
-        // let interactor = LoginFormInteractor(provider: provider)
+        let provider = AuthFirebaseNetworkProvider()
+        let interactor = LoginFormInteractor(loginProvider: provider)
         
         view.presenter = presenter
         view.presenter.view = view
         view.presenter.entity = entity
-        // view.presenter.interactor = interactor
-        // view.presenter.interactor.output = presenter
+        view.presenter.interactor = interactor
+        view.presenter.interactor.output = presenter
         view.presenter.wireframe = wireframe
         
         view.presenter.wireframe.output = presenter

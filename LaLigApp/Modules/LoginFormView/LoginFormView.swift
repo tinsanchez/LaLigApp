@@ -51,10 +51,21 @@ class LoginFormView: BaseViewController, LoginFormViewContract {
         repeatPasswordTextfield.delegate = textFieldsDelegate
 
     }
-    @IBAction func aceptedTermPressed(_ sender: UISwitch) {
-    }
+
     @IBAction func registerPressedButton(_ sender: UIButton) {
+        guard self.acceptTermsSwitch.isOn else {
+            return presenter.showNoTermsAcceptAlert()
+        }
+        guard passwordTextfield.text == repeatPasswordTextfield.text else {
+            return presenter.showNoPasswordMatchAlert()
+        }
+        guard let email = emailTextField.text, let password = passwordTextfield.text else {
+            // MARK: Alert email y contraseña incorrecta o vacía
+            return
+        }
+        presenter.sendAction(email: email, password: password)
     }
+    
     @IBAction func loginPressedButton(_ sender: UIButton) {
     }
 }
@@ -67,7 +78,6 @@ class LoginFormTextFieldDelegate: NSObject, UITextFieldDelegate {
         } else {
             textField.resignFirstResponder()
         }
-
         return true
     }
 }

@@ -140,7 +140,8 @@ class BaseWireframe {
                 basicAlert.addAction($0)
             })
         } else {
-            basicAlert.addAction(UIAlertAction.init(title: "_generic_accept_title".localizedString(),
+            // MARK: LOCALIZED STRING
+            basicAlert.addAction(UIAlertAction.init(title: "_generic_accept_title"/*.localizedString()*/,
                                                     style: .default, handler: nil)
             )
         }

@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import CoreLocation
 import PromiseKit
 
 struct Team {
