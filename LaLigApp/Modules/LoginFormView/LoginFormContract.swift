@@ -12,12 +12,10 @@ import UIKit
 import PromiseKit
 
 protocol LoginFormEntityContract: BaseEntity {
-    
 }
 
 protocol LoginFormViewContract: BaseViewController {
     var presenter: LoginFormPresenterContract! { get set }
-    
 }
 
 protocol LoginFormPresenterContract: BasePresenter {
@@ -25,13 +23,12 @@ protocol LoginFormPresenterContract: BasePresenter {
     var interactor: LoginFormInteractorContract! { get set }
     var entity: LoginFormEntityContract! { get set }
     var wireframe: LoginFormWireframeContract! { get set }
-    
 
     func viewDidLoad()
     func viewWillAppear()
     func showNoTermsAcceptAlert()
-    func showNoPasswordMatchAlert()
-    func sendAction(email: String, password: String)
+    func registerPressed(email: String, password: String)
+    func showUserCreated(confirmed: Bool?)
 }
 
 protocol LoginFormInteractorContract: BaseInteractor {
@@ -39,11 +36,11 @@ protocol LoginFormInteractorContract: BaseInteractor {
     
     init(loginProvider: LoginFormProviderContract)
 
-    func sendLoginData(email: String, password: String) -> Promise<Void>
+    func sendRegisterData(email: String, password: String) -> Promise<Bool>
+    func sendConfirmationEmail()
 }
 
 protocol LoginFormInteractorOutputContract: class {
-    
 }
 
 protocol LoginFormWireframeContract: BaseWireframe {
@@ -55,5 +52,4 @@ protocol LoginFormWireframeContract: BaseWireframe {
 }
 
 protocol LoginFormWireframeOutputContract: class {
-
 }

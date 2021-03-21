@@ -12,18 +12,33 @@ import Firebase
 typealias LoginFormProviderContract = AuthFirebaseNetworkProviderContract
 
 protocol AuthFirebaseNetworkProviderContract {
-    func sendFormData(email: String, password: String) -> Promise<Void>
+    func sendRegisterDataForAuth(email: String, password: String) -> Promise<Bool>
+    func sendConfirmationEmail()
 }
 
 class AuthFirebaseNetworkProvider: AuthFirebaseNetworkProviderContract {
-    func sendFormData(email: String, password: String) -> Promise<Void> {
-        return Promise<Void> { promise in
+   
+    func sendRegisterDataForAuth(email: String, password: String) -> Promise<Bool> {
+        return Promise<Bool> { promise in
+            var confirmed = false
             Auth.auth().createUser(withEmail: email, password: password) { (_, error) in
                 if error != nil {
+                    // MARK: Implementar el manejo de los errores de firebase
+                    // para dar feedback al usuario de cual ha sido el problema.
                     print(error!)
+                } else {
+                    confirmed = true
                 }
+                promise.fulfill(confirmed)
             }
-            promise.fulfill(())
         }
+    }
+    
+    func sendConfirmationEmail() {
+        Auth.auth().currentUser?.sendEmailVerification(completion: { (error) in
+            if error != nil {
+                print(error!)
+            }
+        })
     }
 }

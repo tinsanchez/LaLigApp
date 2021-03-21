@@ -14,14 +14,18 @@ class LoginFormView: BaseViewController, LoginFormViewContract {
 	var presenter: LoginFormPresenterContract!
 
     @IBOutlet weak var nameTextfield: UITextField!
+    @IBOutlet weak var errorNameLabel: UILabel!
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var errorMailLabel: UILabel!
     @IBOutlet weak var repeatEmailTexfield: UITextField!
+    @IBOutlet weak var errorMailLabel2: UILabel!
     @IBOutlet weak var passwordTextfield: UITextField!
+    @IBOutlet weak var errorPassLabel: UILabel!
     @IBOutlet weak var repeatPasswordTextfield: UITextField!
+    @IBOutlet weak var errorPassLabel2: UILabel!
     @IBOutlet weak var acceptTermsSwitch: UISwitch!
     @IBOutlet weak var acceptTermsLabel: UILabel!
     @IBOutlet weak var registerButton: UIButton!
-    @IBOutlet weak var loginButton: UIButton!
     
     // swiftlint:disable:next weak_delegate
     private var textFieldsDelegate: UITextFieldDelegate! = LoginFormTextFieldDelegate()
@@ -31,13 +35,16 @@ class LoginFormView: BaseViewController, LoginFormViewContract {
         super.viewDidLoad()
         self.setupView()
         self.presenter.viewDidLoad()
+        // MARK: Oculta el teclado cuando tocas fuera de el, introducido como extensión de UIViewController,
+        // archivo swift dentro de carpeta extensiones.
+        self.hideKeyboardWhenTappedAround()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.presenter.viewWillAppear()
     }
-
+    
     private func setupView() {
         nameTextfield.tag = 0
         nameTextfield.delegate = textFieldsDelegate
@@ -49,24 +56,43 @@ class LoginFormView: BaseViewController, LoginFormViewContract {
         passwordTextfield.delegate = textFieldsDelegate
         repeatPasswordTextfield.tag = 4
         repeatPasswordTextfield.delegate = textFieldsDelegate
-
     }
 
     @IBAction func registerPressedButton(_ sender: UIButton) {
+        self.errorNameLabel.text = ""
+        self.errorMailLabel.text = ""
+        self.errorMailLabel2.text = ""
+        self.errorPassLabel.text = ""
+        self.errorPassLabel2.text = ""
         guard self.acceptTermsSwitch.isOn else {
             return presenter.showNoTermsAcceptAlert()
         }
+        guard self.nameTextfield.text != "" else {
+            return self.errorNameLabel.text = "Introduce a valid name"
+        }
+        guard self.emailTextField.text != "" else {
+            return self.errorMailLabel.text = "Introduce a valid mail"
+        }
+        guard self.emailTextField.text == self.repeatEmailTexfield.text else {
+            return self.errorMailLabel2.text = "Email does not match"
+        }
+        guard self.passwordTextfield.text != "" else {
+            return self.errorPassLabel.text = "Introduce a valid password"
+        }
+        let patern = "[A-Z]"
+        guard self.passwordTextfield.text?.range(of: patern, options: .regularExpression) != nil else {
+           return self.errorPassLabel.text = "Password must contain one capital letter"
+        }
+        
         guard passwordTextfield.text == repeatPasswordTextfield.text else {
-            return presenter.showNoPasswordMatchAlert()
+            return self.errorPassLabel2.text = "Password does not match"
         }
-        guard let email = emailTextField.text, let password = passwordTextfield.text else {
-            // MARK: Alert email y contraseña incorrecta o vacía
-            return
-        }
-        presenter.sendAction(email: email, password: password)
-    }
-    
-    @IBAction func loginPressedButton(_ sender: UIButton) {
+        guard let email = emailTextField.text, let password = passwordTextfield.text else { return }
+        // MARK: Implementar mas expresiones regulares para que los datos cumplan mas requisitos, por ejemplo la
+        // cantidad de caracteres mínimos que debe contener, o incluir un número en la contraseña,
+        // o que el mail contenga un dominio. Si creciese demasiado creo que la mejor manera de hacerlo
+        // sería con un extensión que contenga una struc con todas estas comprobaciones y expresiones regulares.
+        presenter.registerPressed(email: email, password: password)
     }
 }
 

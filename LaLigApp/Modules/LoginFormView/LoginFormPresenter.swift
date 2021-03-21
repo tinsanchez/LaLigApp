@@ -8,6 +8,7 @@
 //
 
 import Foundation
+import PromiseKit
 
 class LoginFormPresenter: BasePresenter, LoginFormPresenterContract {
 
@@ -15,9 +16,11 @@ class LoginFormPresenter: BasePresenter, LoginFormPresenterContract {
     var interactor: LoginFormInteractorContract!
     var entity: LoginFormEntityContract!
     var wireframe: LoginFormWireframeContract!
+    
+    var confirmed = false
 
     func viewDidLoad() {
-
+        
     }
 
     func viewWillAppear() {
@@ -25,22 +28,30 @@ class LoginFormPresenter: BasePresenter, LoginFormPresenterContract {
     }
     
     func showNoTermsAcceptAlert() {
-        wireframe.showCustomModalAlert(wireframe.view, title: "Accept Terms and Conditions",
+        wireframe.showCustomModalAlert(wireframe.view,
+                                       title: "Accept Terms and Conditions",
                                        content: "to register on this platform it is necessary to accept", completion: nil)
     }
     
-    func showNoPasswordMatchAlert() {
-        wireframe.showCustomModalAlert(wireframe.view, title: "Password does not match",
-                                       content: "Please confirm password again", completion: nil)
+    func registerPressed(email: String, password: String) {
+        firstly {
+            self.interactor.sendRegisterData(email: email, password: password)
+        }.done { [weak self] confirmed in
+            self?.confirmed = confirmed
+            self?.showUserCreated(confirmed: self?.confirmed)
+        }.catch { error in
+            print(error)
+        }
+       
     }
     
-    func sendAction(email: String, password: String) {
-        self.interactor.sendLoginData(email: email, password: password)
-    }
-    
-    func showUserCreated() {
-        wireframe.showCustomModalAlert(wireframe.view, title: "Register Completed!",
+    func showUserCreated(confirmed: Bool?) {
+        if confirmed == true {
+            interactor.sendConfirmationEmail()
+            wireframe.showCustomModalAlert(wireframe.view,
+                                       title: "Register Completed!",
                                        content: "Check your inbox email", completion: nil)
+        }
     }
 }
 

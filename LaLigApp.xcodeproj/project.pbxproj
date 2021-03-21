@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9C11E7ED260535A800BE6763 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C11E7EC260535A800BE6763 /* GoogleService-Info.plist */; };
+		9C11E8092607BE0700BE6763 /* HideKeyboardWhenTapExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C11E8082607BE0700BE6763 /* HideKeyboardWhenTapExtension.swift */; };
 		9C22A27225FAA1840033CDD5 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C22A26A25FAA1840033CDD5 /* BasePresenter.swift */; };
 		9C22A27425FAA1840033CDD5 /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C22A26C25FAA1840033CDD5 /* BaseInteractor.swift */; };
 		9C22A27525FAA1840033CDD5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C22A26D25FAA1840033CDD5 /* BaseViewController.swift */; };
@@ -75,6 +76,7 @@
 		64A7E591FF0F04F7E8207129 /* Pods-LaLigApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaLigApp.debug.xcconfig"; path = "Target Support Files/Pods-LaLigApp/Pods-LaLigApp.debug.xcconfig"; sourceTree = "<group>"; };
 		674159D0138744684B45BB5D /* Pods-LaLigApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaLigApp.release.xcconfig"; path = "Target Support Files/Pods-LaLigApp/Pods-LaLigApp.release.xcconfig"; sourceTree = "<group>"; };
 		9C11E7EC260535A800BE6763 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9C11E8082607BE0700BE6763 /* HideKeyboardWhenTapExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboardWhenTapExtension.swift; sourceTree = "<group>"; };
 		9C22A22125FA38F50033CDD5 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		9C22A22225FA39240033CDD5 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		9C22A26A25FAA1840033CDD5 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
@@ -158,10 +160,10 @@
 			isa = PBXGroup;
 			children = (
 				9C22A22125FA38F50033CDD5 /* Development.xcconfig */,
-				9C22A22225FA39240033CDD5 /* Production.xcconfig */,
-				9CF2098125F97C840074BD7D /* Info.plist */,
-				9C11E7EC260535A800BE6763 /* GoogleService-Info.plist */,
 				9C22A28D25FBE70E0033CDD5 /* Environment.swift */,
+				9C11E7EC260535A800BE6763 /* GoogleService-Info.plist */,
+				9CF2098125F97C840074BD7D /* Info.plist */,
+				9C22A22225FA39240033CDD5 /* Production.xcconfig */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -209,6 +211,7 @@
 		9C22A27F25FBDC680033CDD5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				9C11E8082607BE0700BE6763 /* HideKeyboardWhenTapExtension.swift */,
 				9C22A28025FBDC880033CDD5 /* StringExtension.swift */,
 				9C22A28A25FBE4F70033CDD5 /* UIColorExtension.swift */,
 				9C22A28725FBE49D0033CDD5 /* UIImageViewExtension.swift */,
@@ -584,6 +587,7 @@
 				9C22A2C125FCCD460033CDD5 /* BaseNetworkProvider.swift in Sources */,
 				9C85F9C22602161600E33092 /* MenuTapBarView.swift in Sources */,
 				9C81C3F125FF82E90031D7E9 /* TeamDetailView.swift in Sources */,
+				9C11E8092607BE0700BE6763 /* HideKeyboardWhenTapExtension.swift in Sources */,
 				9C85F9AD260215F200E33092 /* LoginFormContract.swift in Sources */,
 				9C85F9C02602161600E33092 /* MenuTapBarBuilder.swift in Sources */,
 				9C22A27825FAA1840033CDD5 /* BaseWireframe.swift in Sources */,
