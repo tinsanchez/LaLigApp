@@ -27,8 +27,9 @@ class MenuTapBarPresenter: BasePresenter, MenuTapBarPresenterContract {
     func getTabBarViewController() -> [BaseViewController] {
         let teamList = TeamListBuilder.build()
         let loginFormView = LoginFormBuilder.build()
+        let qrCodeCapture = QRCodeCaptureBuilder.build()
         
-        return [teamList, loginFormView]
+        return [teamList, loginFormView, qrCodeCapture]
     }
 }
 

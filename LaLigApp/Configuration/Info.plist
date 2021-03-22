@@ -75,5 +75,7 @@
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>We will show you the venue in maps. Please allow your location</string>
+	<key>NSCameraUsageDescription</key>
+	<string>We need access to your camera to scaner QR Code</string>
 </dict>
 </plist>

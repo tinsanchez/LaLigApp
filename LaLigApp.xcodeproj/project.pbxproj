@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		9C11E7ED260535A800BE6763 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C11E7EC260535A800BE6763 /* GoogleService-Info.plist */; };
 		9C11E8092607BE0700BE6763 /* HideKeyboardWhenTapExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C11E8082607BE0700BE6763 /* HideKeyboardWhenTapExtension.swift */; };
+		9C11E8222608AEC100BE6763 /* QRCodeCaptureContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C11E81A2608AEC100BE6763 /* QRCodeCaptureContract.swift */; };
+		9C11E8232608AEC100BE6763 /* QRCodeCapturePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C11E81B2608AEC100BE6763 /* QRCodeCapturePresenter.swift */; };
+		9C11E8242608AEC100BE6763 /* QRCodeCaptureBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C11E81C2608AEC100BE6763 /* QRCodeCaptureBuilder.swift */; };
+		9C11E8252608AEC100BE6763 /* QRCodeCaptureInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C11E81D2608AEC100BE6763 /* QRCodeCaptureInteractor.swift */; };
+		9C11E8262608AEC100BE6763 /* QRCodeCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C11E81E2608AEC100BE6763 /* QRCodeCaptureView.swift */; };
+		9C11E8272608AEC100BE6763 /* QRCodeCaptureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C11E81F2608AEC100BE6763 /* QRCodeCaptureView.xib */; };
+		9C11E8282608AEC100BE6763 /* QRCodeCaptureEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C11E8202608AEC100BE6763 /* QRCodeCaptureEntity.swift */; };
+		9C11E8292608AEC100BE6763 /* QRCodeCaptureWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C11E8212608AEC100BE6763 /* QRCodeCaptureWireframe.swift */; };
 		9C22A27225FAA1840033CDD5 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C22A26A25FAA1840033CDD5 /* BasePresenter.swift */; };
 		9C22A27425FAA1840033CDD5 /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C22A26C25FAA1840033CDD5 /* BaseInteractor.swift */; };
 		9C22A27525FAA1840033CDD5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C22A26D25FAA1840033CDD5 /* BaseViewController.swift */; };
@@ -77,6 +85,14 @@
 		674159D0138744684B45BB5D /* Pods-LaLigApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaLigApp.release.xcconfig"; path = "Target Support Files/Pods-LaLigApp/Pods-LaLigApp.release.xcconfig"; sourceTree = "<group>"; };
 		9C11E7EC260535A800BE6763 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9C11E8082607BE0700BE6763 /* HideKeyboardWhenTapExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboardWhenTapExtension.swift; sourceTree = "<group>"; };
+		9C11E81A2608AEC100BE6763 /* QRCodeCaptureContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeCaptureContract.swift; sourceTree = "<group>"; };
+		9C11E81B2608AEC100BE6763 /* QRCodeCapturePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeCapturePresenter.swift; sourceTree = "<group>"; };
+		9C11E81C2608AEC100BE6763 /* QRCodeCaptureBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeCaptureBuilder.swift; sourceTree = "<group>"; };
+		9C11E81D2608AEC100BE6763 /* QRCodeCaptureInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeCaptureInteractor.swift; sourceTree = "<group>"; };
+		9C11E81E2608AEC100BE6763 /* QRCodeCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeCaptureView.swift; sourceTree = "<group>"; };
+		9C11E81F2608AEC100BE6763 /* QRCodeCaptureView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRCodeCaptureView.xib; sourceTree = "<group>"; };
+		9C11E8202608AEC100BE6763 /* QRCodeCaptureEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeCaptureEntity.swift; sourceTree = "<group>"; };
+		9C11E8212608AEC100BE6763 /* QRCodeCaptureWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeCaptureWireframe.swift; sourceTree = "<group>"; };
 		9C22A22125FA38F50033CDD5 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		9C22A22225FA39240033CDD5 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		9C22A26A25FAA1840033CDD5 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
@@ -156,6 +172,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C11E8192608AE7600BE6763 /* QRCodeCapture */ = {
+			isa = PBXGroup;
+			children = (
+				9C11E81C2608AEC100BE6763 /* QRCodeCaptureBuilder.swift */,
+				9C11E81A2608AEC100BE6763 /* QRCodeCaptureContract.swift */,
+				9C11E8202608AEC100BE6763 /* QRCodeCaptureEntity.swift */,
+				9C11E81D2608AEC100BE6763 /* QRCodeCaptureInteractor.swift */,
+				9C11E81B2608AEC100BE6763 /* QRCodeCapturePresenter.swift */,
+				9C11E81E2608AEC100BE6763 /* QRCodeCaptureView.swift */,
+				9C11E8212608AEC100BE6763 /* QRCodeCaptureWireframe.swift */,
+				9C11E82C2608AECD00BE6763 /* UI */,
+			);
+			path = QRCodeCapture;
+			sourceTree = "<group>";
+		};
+		9C11E82C2608AECD00BE6763 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9C11E81F2608AEC100BE6763 /* QRCodeCaptureView.xib */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		9C22A21C25FA30BF0033CDD5 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +218,7 @@
 		9C22A23B25FA435F0033CDD5 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				9C11E8192608AE7600BE6763 /* QRCodeCapture */,
 				9C22A24F25FA9FFA0033CDD5 /* BASE */,
 				9C85F9A32602148E00E33092 /* LoginFormView */,
 				9C85F9A4260214B000E33092 /* MenuTapBar */,
@@ -505,6 +545,7 @@
 				9C85F9D826029E8500E33092 /* MenuTapBarView.xib in Resources */,
 				9C85F9E726029EA700E33092 /* TeamListView.xib in Resources */,
 				9C85F9D426029E7A00E33092 /* LoginFormView.xib in Resources */,
+				9C11E8272608AEC100BE6763 /* QRCodeCaptureView.xib in Resources */,
 				9C85F9E426029EA100E33092 /* TeamListTableViewCell.xib in Resources */,
 				9C22A2B725FBF2C60033CDD5 /* LoadingView.xib in Resources */,
 				9CF2098025F97C840074BD7D /* LaunchScreen.storyboard in Resources */,
@@ -588,6 +629,7 @@
 				9C85F9C22602161600E33092 /* MenuTapBarView.swift in Sources */,
 				9C81C3F125FF82E90031D7E9 /* TeamDetailView.swift in Sources */,
 				9C11E8092607BE0700BE6763 /* HideKeyboardWhenTapExtension.swift in Sources */,
+				9C11E8262608AEC100BE6763 /* QRCodeCaptureView.swift in Sources */,
 				9C85F9AD260215F200E33092 /* LoginFormContract.swift in Sources */,
 				9C85F9C02602161600E33092 /* MenuTapBarBuilder.swift in Sources */,
 				9C22A27825FAA1840033CDD5 /* BaseWireframe.swift in Sources */,
@@ -605,6 +647,7 @@
 				9C22A27225FAA1840033CDD5 /* BasePresenter.swift in Sources */,
 				9C85F9BF2602161600E33092 /* MenuTapBarPresenter.swift in Sources */,
 				9CF2097425F97C840074BD7D /* AppDelegate.swift in Sources */,
+				9C11E8232608AEC100BE6763 /* QRCodeCapturePresenter.swift in Sources */,
 				9C85F9C52602161600E33092 /* MenuTapBarWireframe.swift in Sources */,
 				9C22A28825FBE49D0033CDD5 /* UIImageViewExtension.swift in Sources */,
 				9C81C3F425FF82E90031D7E9 /* TeamDetailWireframe.swift in Sources */,
@@ -618,11 +661,15 @@
 				9C81C4222600C4C50031D7E9 /* DetailTableViewCell.swift in Sources */,
 				9C85F9B4260215F200E33092 /* LoginFormWireframe.swift in Sources */,
 				9C22A2A225FBEF9E0033CDD5 /* TeamListBuilder.swift in Sources */,
+				9C11E8292608AEC100BE6763 /* QRCodeCaptureWireframe.swift in Sources */,
 				9C22A2A125FBEF9E0033CDD5 /* TeamListPresenter.swift in Sources */,
 				9C22A27425FAA1840033CDD5 /* BaseInteractor.swift in Sources */,
+				9C11E8242608AEC100BE6763 /* QRCodeCaptureBuilder.swift in Sources */,
+				9C11E8282608AEC100BE6763 /* QRCodeCaptureEntity.swift in Sources */,
 				9C22A2B425FBF2B80033CDD5 /* LoadingViewController.swift in Sources */,
 				9C85F9BE2602161600E33092 /* MenuTapBarContract.swift in Sources */,
 				9C22A2A625FBEF9E0033CDD5 /* TeamListEntity.swift in Sources */,
+				9C11E8222608AEC100BE6763 /* QRCodeCaptureContract.swift in Sources */,
 				9C22A2A425FBEF9E0033CDD5 /* TeamListView.swift in Sources */,
 				9C22A27525FAA1840033CDD5 /* BaseViewController.swift in Sources */,
 				9C85F9B3260215F200E33092 /* LoginFormEntity.swift in Sources */,
@@ -632,6 +679,7 @@
 				9C85F9B0260215F200E33092 /* LoginFormInteractor.swift in Sources */,
 				9C22A28E25FBE70E0033CDD5 /* Environment.swift in Sources */,
 				9C85F9C12602161600E33092 /* MenuTapBarInteractor.swift in Sources */,
+				9C11E8252608AEC100BE6763 /* QRCodeCaptureInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
