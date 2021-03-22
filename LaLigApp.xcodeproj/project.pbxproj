@@ -7,16 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9C11E7ED260535A800BE6763 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C11E7EC260535A800BE6763 /* GoogleService-Info.plist */; };
 		9C11E8092607BE0700BE6763 /* HideKeyboardWhenTapExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C11E8082607BE0700BE6763 /* HideKeyboardWhenTapExtension.swift */; };
 		9C11E8222608AEC100BE6763 /* QRCodeCaptureContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C11E81A2608AEC100BE6763 /* QRCodeCaptureContract.swift */; };
 		9C11E8232608AEC100BE6763 /* QRCodeCapturePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C11E81B2608AEC100BE6763 /* QRCodeCapturePresenter.swift */; };
 		9C11E8242608AEC100BE6763 /* QRCodeCaptureBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C11E81C2608AEC100BE6763 /* QRCodeCaptureBuilder.swift */; };
 		9C11E8252608AEC100BE6763 /* QRCodeCaptureInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C11E81D2608AEC100BE6763 /* QRCodeCaptureInteractor.swift */; };
 		9C11E8262608AEC100BE6763 /* QRCodeCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C11E81E2608AEC100BE6763 /* QRCodeCaptureView.swift */; };
-		9C11E8272608AEC100BE6763 /* QRCodeCaptureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C11E81F2608AEC100BE6763 /* QRCodeCaptureView.xib */; };
 		9C11E8282608AEC100BE6763 /* QRCodeCaptureEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C11E8202608AEC100BE6763 /* QRCodeCaptureEntity.swift */; };
 		9C11E8292608AEC100BE6763 /* QRCodeCaptureWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C11E8212608AEC100BE6763 /* QRCodeCaptureWireframe.swift */; };
+		9C11E82F2608F18A00BE6763 /* OrientationForViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C11E82E2608F18A00BE6763 /* OrientationForViewExtension.swift */; };
+		9C11E8782609185800BE6763 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C11E8772609185800BE6763 /* LoadingView.xib */; };
+		9C11E893260918E200BE6763 /* LoginFormView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C11E892260918E200BE6763 /* LoginFormView.xib */; };
+		9C11E8972609190100BE6763 /* MenuTapBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C11E8962609190100BE6763 /* MenuTapBarView.xib */; };
+		9C11E89A2609191400BE6763 /* QRCodeCaptureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C11E8992609191400BE6763 /* QRCodeCaptureView.xib */; };
+		9C11E89E2609193300BE6763 /* TeamDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C11E89D2609193300BE6763 /* TeamDetailView.xib */; };
+		9C11E8A02609193F00BE6763 /* DetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C11E89F2609193F00BE6763 /* DetailTableViewCell.xib */; };
+		9C11E8A22609195200BE6763 /* TeamListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C11E8A12609195200BE6763 /* TeamListView.xib */; };
+		9C11E8A52609196400BE6763 /* TeamListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C11E8A42609196400BE6763 /* TeamListTableViewCell.xib */; };
+		9C11E8C926091D7300BE6763 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C11E8C826091D7300BE6763 /* GoogleService-Info.plist */; };
+		9C11E8DE260920B400BE6763 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C11E8DD260920B400BE6763 /* LaunchScreen.storyboard */; };
 		9C22A27225FAA1840033CDD5 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C22A26A25FAA1840033CDD5 /* BasePresenter.swift */; };
 		9C22A27425FAA1840033CDD5 /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C22A26C25FAA1840033CDD5 /* BaseInteractor.swift */; };
 		9C22A27525FAA1840033CDD5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C22A26D25FAA1840033CDD5 /* BaseViewController.swift */; };
@@ -35,7 +44,6 @@
 		9C22A2A625FBEF9E0033CDD5 /* TeamListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C22A29E25FBEF9E0033CDD5 /* TeamListEntity.swift */; };
 		9C22A2A725FBEF9E0033CDD5 /* TeamListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C22A29F25FBEF9E0033CDD5 /* TeamListWireframe.swift */; };
 		9C22A2B425FBF2B80033CDD5 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C22A2B325FBF2B80033CDD5 /* LoadingViewController.swift */; };
-		9C22A2B725FBF2C60033CDD5 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C22A2B625FBF2C50033CDD5 /* LoadingView.xib */; };
 		9C22A2BE25FCCB660033CDD5 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C22A2BD25FCCB660033CDD5 /* NetworkConstants.swift */; };
 		9C22A2C125FCCD460033CDD5 /* BaseNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C22A2C025FCCD460033CDD5 /* BaseNetworkProvider.swift */; };
 		9C22A2C425FCCDFB0033CDD5 /* TeamNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C22A2C325FCCDFB0033CDD5 /* TeamNetworkProvider.swift */; };
@@ -64,18 +72,11 @@
 		9C85F9C22602161600E33092 /* MenuTapBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C85F9BA2602161600E33092 /* MenuTapBarView.swift */; };
 		9C85F9C42602161600E33092 /* MenuTapBarEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C85F9BC2602161600E33092 /* MenuTapBarEntity.swift */; };
 		9C85F9C52602161600E33092 /* MenuTapBarWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C85F9BD2602161600E33092 /* MenuTapBarWireframe.swift */; };
-		9C85F9D426029E7A00E33092 /* LoginFormView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C85F9D626029E7A00E33092 /* LoginFormView.xib */; };
-		9C85F9D826029E8500E33092 /* MenuTapBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C85F9DA26029E8500E33092 /* MenuTapBarView.xib */; };
-		9C85F9DC26029E8C00E33092 /* DetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C85F9DE26029E8C00E33092 /* DetailTableViewCell.xib */; };
-		9C85F9E026029E9100E33092 /* TeamDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C85F9E226029E9100E33092 /* TeamDetailView.xib */; };
-		9C85F9E426029EA100E33092 /* TeamListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C85F9E626029EA100E33092 /* TeamListTableViewCell.xib */; };
-		9C85F9E726029EA700E33092 /* TeamListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C85F9E926029EA700E33092 /* TeamListView.xib */; };
 		9C85FA9F2605259100E33092 /* AuthFirebaseNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C85FA9E2605259100E33092 /* AuthFirebaseNetworkProvider.swift */; };
 		9CF2097425F97C840074BD7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF2097325F97C840074BD7D /* AppDelegate.swift */; };
 		9CF2097625F97C840074BD7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF2097525F97C840074BD7D /* SceneDelegate.swift */; };
 		9CF2097825F97C840074BD7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF2097725F97C840074BD7D /* ViewController.swift */; };
 		9CF2097D25F97C840074BD7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CF2097C25F97C840074BD7D /* Assets.xcassets */; };
-		9CF2098025F97C840074BD7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CF2097E25F97C840074BD7D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,16 +84,26 @@
 		2B256532812BF84F9B649C12 /* Pods-LaLigApp.debug (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaLigApp.debug (production).xcconfig"; path = "Target Support Files/Pods-LaLigApp/Pods-LaLigApp.debug (production).xcconfig"; sourceTree = "<group>"; };
 		64A7E591FF0F04F7E8207129 /* Pods-LaLigApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaLigApp.debug.xcconfig"; path = "Target Support Files/Pods-LaLigApp/Pods-LaLigApp.debug.xcconfig"; sourceTree = "<group>"; };
 		674159D0138744684B45BB5D /* Pods-LaLigApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaLigApp.release.xcconfig"; path = "Target Support Files/Pods-LaLigApp/Pods-LaLigApp.release.xcconfig"; sourceTree = "<group>"; };
-		9C11E7EC260535A800BE6763 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9C11E8082607BE0700BE6763 /* HideKeyboardWhenTapExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboardWhenTapExtension.swift; sourceTree = "<group>"; };
 		9C11E81A2608AEC100BE6763 /* QRCodeCaptureContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeCaptureContract.swift; sourceTree = "<group>"; };
 		9C11E81B2608AEC100BE6763 /* QRCodeCapturePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeCapturePresenter.swift; sourceTree = "<group>"; };
 		9C11E81C2608AEC100BE6763 /* QRCodeCaptureBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeCaptureBuilder.swift; sourceTree = "<group>"; };
 		9C11E81D2608AEC100BE6763 /* QRCodeCaptureInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeCaptureInteractor.swift; sourceTree = "<group>"; };
 		9C11E81E2608AEC100BE6763 /* QRCodeCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeCaptureView.swift; sourceTree = "<group>"; };
-		9C11E81F2608AEC100BE6763 /* QRCodeCaptureView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRCodeCaptureView.xib; sourceTree = "<group>"; };
 		9C11E8202608AEC100BE6763 /* QRCodeCaptureEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeCaptureEntity.swift; sourceTree = "<group>"; };
 		9C11E8212608AEC100BE6763 /* QRCodeCaptureWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeCaptureWireframe.swift; sourceTree = "<group>"; };
+		9C11E82E2608F18A00BE6763 /* OrientationForViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationForViewExtension.swift; sourceTree = "<group>"; };
+		9C11E8772609185800BE6763 /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		9C11E892260918E200BE6763 /* LoginFormView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginFormView.xib; sourceTree = "<group>"; };
+		9C11E8962609190100BE6763 /* MenuTapBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuTapBarView.xib; sourceTree = "<group>"; };
+		9C11E8992609191400BE6763 /* QRCodeCaptureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRCodeCaptureView.xib; sourceTree = "<group>"; };
+		9C11E89D2609193300BE6763 /* TeamDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeamDetailView.xib; sourceTree = "<group>"; };
+		9C11E89F2609193F00BE6763 /* DetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailTableViewCell.xib; sourceTree = "<group>"; };
+		9C11E8A12609195200BE6763 /* TeamListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeamListView.xib; sourceTree = "<group>"; };
+		9C11E8A42609196400BE6763 /* TeamListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeamListTableViewCell.xib; sourceTree = "<group>"; };
+		9C11E8BF26091C4300BE6763 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
+		9C11E8C826091D7300BE6763 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9C11E8DD260920B400BE6763 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C22A22125FA38F50033CDD5 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		9C22A22225FA39240033CDD5 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		9C22A26A25FAA1840033CDD5 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
@@ -113,7 +124,6 @@
 		9C22A29E25FBEF9E0033CDD5 /* TeamListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListEntity.swift; sourceTree = "<group>"; };
 		9C22A29F25FBEF9E0033CDD5 /* TeamListWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListWireframe.swift; sourceTree = "<group>"; };
 		9C22A2B325FBF2B80033CDD5 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
-		9C22A2B625FBF2C50033CDD5 /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		9C22A2BD25FCCB660033CDD5 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		9C22A2C025FCCD460033CDD5 /* BaseNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkProvider.swift; sourceTree = "<group>"; };
 		9C22A2C325FCCDFB0033CDD5 /* TeamNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamNetworkProvider.swift; sourceTree = "<group>"; };
@@ -142,21 +152,12 @@
 		9C85F9BA2602161600E33092 /* MenuTapBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTapBarView.swift; sourceTree = "<group>"; };
 		9C85F9BC2602161600E33092 /* MenuTapBarEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTapBarEntity.swift; sourceTree = "<group>"; };
 		9C85F9BD2602161600E33092 /* MenuTapBarWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTapBarWireframe.swift; sourceTree = "<group>"; };
-		9C85F9D526029E7A00E33092 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LoginFormView.xib; sourceTree = "<group>"; };
-		9C85F9D926029E8500E33092 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MenuTapBarView.xib; sourceTree = "<group>"; };
-		9C85F9DD26029E8C00E33092 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/DetailTableViewCell.xib; sourceTree = "<group>"; };
-		9C85F9E126029E9100E33092 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TeamDetailView.xib; sourceTree = "<group>"; };
-		9C85F9E526029EA100E33092 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TeamListTableViewCell.xib; sourceTree = "<group>"; };
-		9C85F9E826029EA700E33092 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TeamListView.xib; sourceTree = "<group>"; };
-		9C85FA1F2604D0D500E33092 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LoginFormView.strings; sourceTree = "<group>"; };
 		9C85FA9E2605259100E33092 /* AuthFirebaseNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthFirebaseNetworkProvider.swift; path = LaLigApp/Providers/Network/Gateaways/AuthFirebaseNetworkProvider.swift; sourceTree = SOURCE_ROOT; };
 		9CF2097025F97C840074BD7D /* LaLigApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaLigApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CF2097325F97C840074BD7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CF2097525F97C840074BD7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9CF2097725F97C840074BD7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9CF2097C25F97C840074BD7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9CF2097F25F97C840074BD7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9CF2098125F97C840074BD7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2CCDEEEE4B3F02F4EB175D3 /* Pods-LaLigApp.release (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaLigApp.release (development).xcconfig"; path = "Target Support Files/Pods-LaLigApp/Pods-LaLigApp.release (development).xcconfig"; sourceTree = "<group>"; };
 		F92C86CD5CF020E91CD5AA15 /* Pods-LaLigApp.debug (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaLigApp.debug (development).xcconfig"; path = "Target Support Files/Pods-LaLigApp/Pods-LaLigApp.debug (development).xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -190,7 +191,7 @@
 		9C11E82C2608AECD00BE6763 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				9C11E81F2608AEC100BE6763 /* QRCodeCaptureView.xib */,
+				9C11E8992609191400BE6763 /* QRCodeCaptureView.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -200,8 +201,8 @@
 			children = (
 				9C22A22125FA38F50033CDD5 /* Development.xcconfig */,
 				9C22A28D25FBE70E0033CDD5 /* Environment.swift */,
-				9C11E7EC260535A800BE6763 /* GoogleService-Info.plist */,
-				9CF2098125F97C840074BD7D /* Info.plist */,
+				9C11E8C826091D7300BE6763 /* GoogleService-Info.plist */,
+				9C11E8C026091C4300BE6763 /* Info.plist */,
 				9C22A22225FA39240033CDD5 /* Production.xcconfig */,
 			);
 			path = Configuration;
@@ -218,10 +219,10 @@
 		9C22A23B25FA435F0033CDD5 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				9C11E8192608AE7600BE6763 /* QRCodeCapture */,
 				9C22A24F25FA9FFA0033CDD5 /* BASE */,
 				9C85F9A32602148E00E33092 /* LoginFormView */,
 				9C85F9A4260214B000E33092 /* MenuTapBar */,
+				9C11E8192608AE7600BE6763 /* QRCodeCapture */,
 				9C81C3F625FF82F00031D7E9 /* TeamDetail */,
 				9C22A2A925FBEFA70033CDD5 /* TeamList */,
 			);
@@ -252,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				9C11E8082607BE0700BE6763 /* HideKeyboardWhenTapExtension.swift */,
+				9C11E82E2608F18A00BE6763 /* OrientationForViewExtension.swift */,
 				9C22A28025FBDC880033CDD5 /* StringExtension.swift */,
 				9C22A28A25FBE4F70033CDD5 /* UIColorExtension.swift */,
 				9C22A28725FBE49D0033CDD5 /* UIImageViewExtension.swift */,
@@ -295,7 +297,7 @@
 		9C22A2AE25FBF1470033CDD5 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				9C22A2B625FBF2C50033CDD5 /* LoadingView.xib */,
+				9C11E8772609185800BE6763 /* LoadingView.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -313,9 +315,9 @@
 		9C22A2BB25FCC6B00033CDD5 /* Gateaways */ = {
 			isa = PBXGroup;
 			children = (
+				9C85FA9E2605259100E33092 /* AuthFirebaseNetworkProvider.swift */,
 				9C22A2BC25FCC6CF0033CDD5 /* DAO */,
 				9C22A2C325FCCDFB0033CDD5 /* TeamNetworkProvider.swift */,
-				9C85FA9E2605259100E33092 /* AuthFirebaseNetworkProvider.swift */,
 			);
 			path = Gateaways;
 			sourceTree = "<group>";
@@ -332,7 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				9C22A2D025FCD7A20033CDD5 /* TeamCell */,
-				9C85F9E926029EA700E33092 /* TeamListView.xib */,
+				9C11E8A12609195200BE6763 /* TeamListView.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -340,7 +342,7 @@
 		9C22A2D025FCD7A20033CDD5 /* TeamCell */ = {
 			isa = PBXGroup;
 			children = (
-				9C85F9E626029EA100E33092 /* TeamListTableViewCell.xib */,
+				9C11E8A42609196400BE6763 /* TeamListTableViewCell.xib */,
 				9C22A2D425FCD7DA0033CDD5 /* TeamListTableViewCell.swift */,
 			);
 			path = TeamCell;
@@ -365,7 +367,7 @@
 			isa = PBXGroup;
 			children = (
 				9C81C41D2600C4620031D7E9 /* DetailTableViewCell */,
-				9C85F9E226029E9100E33092 /* TeamDetailView.xib */,
+				9C11E89D2609193300BE6763 /* TeamDetailView.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -373,7 +375,7 @@
 		9C81C41D2600C4620031D7E9 /* DetailTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				9C85F9DE26029E8C00E33092 /* DetailTableViewCell.xib */,
+				9C11E89F2609193F00BE6763 /* DetailTableViewCell.xib */,
 				9C81C4212600C4C50031D7E9 /* DetailTableViewCell.swift */,
 			);
 			path = DetailTableViewCell;
@@ -412,7 +414,7 @@
 		9C85F9C72602162000E33092 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				9C85F9DA26029E8500E33092 /* MenuTapBarView.xib */,
+				9C11E8962609190100BE6763 /* MenuTapBarView.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -420,7 +422,7 @@
 		9C85F9C82602162800E33092 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				9C85F9D626029E7A00E33092 /* LoginFormView.xib */,
+				9C11E892260918E200BE6763 /* LoginFormView.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -449,8 +451,8 @@
 				9CF2097325F97C840074BD7D /* AppDelegate.swift */,
 				9CF2097525F97C840074BD7D /* SceneDelegate.swift */,
 				9CF2097725F97C840074BD7D /* ViewController.swift */,
+				9C11E8DD260920B400BE6763 /* LaunchScreen.storyboard */,
 				9CF2097C25F97C840074BD7D /* Assets.xcassets */,
-				9CF2097E25F97C840074BD7D /* LaunchScreen.storyboard */,
 				9C22A2AC25FBF11E0033CDD5 /* Components */,
 				9C22A21C25FA30BF0033CDD5 /* Configuration */,
 				9C22A27F25FBDC680033CDD5 /* Extensions */,
@@ -541,16 +543,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C85F9E026029E9100E33092 /* TeamDetailView.xib in Resources */,
-				9C85F9D826029E8500E33092 /* MenuTapBarView.xib in Resources */,
-				9C85F9E726029EA700E33092 /* TeamListView.xib in Resources */,
-				9C85F9D426029E7A00E33092 /* LoginFormView.xib in Resources */,
-				9C11E8272608AEC100BE6763 /* QRCodeCaptureView.xib in Resources */,
-				9C85F9E426029EA100E33092 /* TeamListTableViewCell.xib in Resources */,
-				9C22A2B725FBF2C60033CDD5 /* LoadingView.xib in Resources */,
-				9CF2098025F97C840074BD7D /* LaunchScreen.storyboard in Resources */,
-				9C11E7ED260535A800BE6763 /* GoogleService-Info.plist in Resources */,
-				9C85F9DC26029E8C00E33092 /* DetailTableViewCell.xib in Resources */,
+				9C11E8A52609196400BE6763 /* TeamListTableViewCell.xib in Resources */,
+				9C11E89E2609193300BE6763 /* TeamDetailView.xib in Resources */,
+				9C11E8972609190100BE6763 /* MenuTapBarView.xib in Resources */,
+				9C11E89A2609191400BE6763 /* QRCodeCaptureView.xib in Resources */,
+				9C11E8A22609195200BE6763 /* TeamListView.xib in Resources */,
+				9C11E893260918E200BE6763 /* LoginFormView.xib in Resources */,
+				9C11E8782609185800BE6763 /* LoadingView.xib in Resources */,
+				9C11E8C926091D7300BE6763 /* GoogleService-Info.plist in Resources */,
+				9C11E8A02609193F00BE6763 /* DetailTableViewCell.xib in Resources */,
+				9C11E8DE260920B400BE6763 /* LaunchScreen.storyboard in Resources */,
 				9CF2097D25F97C840074BD7D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -676,6 +678,7 @@
 				9C22A28B25FBE4F70033CDD5 /* UIColorExtension.swift in Sources */,
 				9C22A2C825FCCE3B0033CDD5 /* TeamDAO.swift in Sources */,
 				9C22A2A325FBEF9E0033CDD5 /* TeamListInteractor.swift in Sources */,
+				9C11E82F2608F18A00BE6763 /* OrientationForViewExtension.swift in Sources */,
 				9C85F9B0260215F200E33092 /* LoginFormInteractor.swift in Sources */,
 				9C22A28E25FBE70E0033CDD5 /* Environment.swift in Sources */,
 				9C85F9C12602161600E33092 /* MenuTapBarInteractor.swift in Sources */,
@@ -686,61 +689,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9C85F9D626029E7A00E33092 /* LoginFormView.xib */ = {
+		9C11E8C026091C4300BE6763 /* Info.plist */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9C85F9D526029E7A00E33092 /* Base */,
-				9C85FA1F2604D0D500E33092 /* en */,
+				9C11E8BF26091C4300BE6763 /* Base */,
 			);
-			name = LoginFormView.xib;
-			sourceTree = "<group>";
-		};
-		9C85F9DA26029E8500E33092 /* MenuTapBarView.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9C85F9D926029E8500E33092 /* Base */,
-			);
-			name = MenuTapBarView.xib;
-			sourceTree = "<group>";
-		};
-		9C85F9DE26029E8C00E33092 /* DetailTableViewCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9C85F9DD26029E8C00E33092 /* Base */,
-			);
-			name = DetailTableViewCell.xib;
-			sourceTree = "<group>";
-		};
-		9C85F9E226029E9100E33092 /* TeamDetailView.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9C85F9E126029E9100E33092 /* Base */,
-			);
-			name = TeamDetailView.xib;
-			sourceTree = "<group>";
-		};
-		9C85F9E626029EA100E33092 /* TeamListTableViewCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9C85F9E526029EA100E33092 /* Base */,
-			);
-			name = TeamListTableViewCell.xib;
-			sourceTree = "<group>";
-		};
-		9C85F9E926029EA700E33092 /* TeamListView.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9C85F9E826029EA700E33092 /* Base */,
-			);
-			name = TeamListView.xib;
-			sourceTree = "<group>";
-		};
-		9CF2097E25F97C840074BD7D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9CF2097F25F97C840074BD7D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
+			name = Info.plist;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -751,6 +705,7 @@
 			baseConfigurationReference = 9C22A22225FA39240033CDD5 /* Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -842,6 +797,7 @@
 			baseConfigurationReference = 9C22A22225FA39240033CDD5 /* Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -927,6 +883,7 @@
 			baseConfigurationReference = 9C22A22125FA38F50033CDD5 /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -998,6 +955,7 @@
 			baseConfigurationReference = 9C22A22125FA38F50033CDD5 /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

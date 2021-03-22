@@ -20,14 +20,14 @@ class QRCodeCaptureBuilder {
         let entity = QRCodeCaptureEntity()
         let wireframe = QRCodeCaptureWireframe()
         
-        //let provider = MyProvider()
-        //let interactor = QRCodeCaptureInteractor(provider: provider)
+        // let provider = MyProvider()
+        // let interactor = QRCodeCaptureInteractor(provider: provider)
         
         view.presenter = presenter
         view.presenter.view = view
         view.presenter.entity = entity
-        //view.presenter.interactor = interactor
-        //view.presenter.interactor.output = presenter
+        // view.presenter.interactor = interactor
+        // view.presenter.interactor.output = presenter
         view.presenter.wireframe = wireframe
         
         view.presenter.wireframe.output = presenter

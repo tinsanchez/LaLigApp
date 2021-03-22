@@ -15,6 +15,9 @@ class QRCodeCaptureView: BaseViewController, QRCodeCaptureViewContract, AVCaptur
 
 	var presenter: QRCodeCapturePresenterContract!
     
+    @IBOutlet weak var tittleLabel: UILabel!
+    @IBOutlet weak var URLLabel: UILabel!
+    
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
 
@@ -28,7 +31,7 @@ class QRCodeCaptureView: BaseViewController, QRCodeCaptureViewContract, AVCaptur
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.presenter.viewWillAppear()
-        
+        AppUtility.lockOrientation(.portrait)
         if captureSession?.isRunning == false {
             captureSession.startRunning()
         }
@@ -36,13 +39,16 @@ class QRCodeCaptureView: BaseViewController, QRCodeCaptureViewContract, AVCaptur
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-
+        AppUtility.lockOrientation(.all)
         if captureSession?.isRunning == true {
             captureSession.stopRunning()
         }
+        self.tittleLabel.text = "Scan a QR Code"
+        self.URLLabel.text = ""
     }
 
     private func setupView() {
+        
         view.backgroundColor = UIColor.black
         captureSession = AVCaptureSession()
 
@@ -78,6 +84,7 @@ class QRCodeCaptureView: BaseViewController, QRCodeCaptureViewContract, AVCaptur
         previewLayer.frame = view.layer.bounds
         previewLayer.videoGravity = .resizeAspectFill
         view.layer.addSublayer(previewLayer)
+        view.bringSubviewToFront(tittleLabel)
 
         captureSession.startRunning()
     }
@@ -96,21 +103,19 @@ class QRCodeCaptureView: BaseViewController, QRCodeCaptureViewContract, AVCaptur
             guard let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject else { return }
             guard let stringValue = readableObject.stringValue else { return }
             AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
-            found(code: stringValue)
+            self.URLLabel.text = stringValue
+            self.tittleLabel.text = "Touch to open in Safary"
+            view.bringSubviewToFront(tittleLabel)
+            view.bringSubviewToFront(URLLabel)
+            let tap = UITapGestureRecognizer(target: self, action: #selector(self.found))
+            URLLabel.addGestureRecognizer(tap)
         }
         dismiss(animated: true)
     }
 
-    func found(code: String) {
-        print("codigo capturado \(code)")
-        presenter.capturedURL(url: code)
-    }
-
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
-
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return .portrait
+    @objc func found() {
+        // MARK: Cuando llego a esta función en el alterior método
+        // ya he asegurado que el texto de URLLabel no está vacio.
+        presenter.capturedURL(url: URLLabel.text!)
     }
 }

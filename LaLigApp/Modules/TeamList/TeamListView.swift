@@ -30,6 +30,7 @@ class TeamListView: BaseViewController, TeamListViewContract {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.presenter.viewWillAppear()
+        self.view.backgroundColor = UIColor(named: "backColorForDarkMode")
     }
     
     // MARK: - Public methods

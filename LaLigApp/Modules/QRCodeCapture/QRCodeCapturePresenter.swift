@@ -31,7 +31,6 @@ class QRCodeCapturePresenter: BasePresenter, QRCodeCapturePresenterContract {
     }
     
     func capturedURL(url: String) {
-        print("codigo en presenter \(url)")
         wireframe.openURL(url: url)
     }
 }

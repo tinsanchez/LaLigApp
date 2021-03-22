@@ -16,7 +16,6 @@ class QRCodeCaptureWireframe: BaseWireframe, QRCodeCaptureWireframeContract {
     weak var view: UIViewController!
 
     weak var loadingDelegate: LoadingViewDelegate!
-    
 
     /// Show basic loading
     /// - Parameters:
@@ -39,13 +38,16 @@ class QRCodeCaptureWireframe: BaseWireframe, QRCodeCaptureWireframeContract {
     }
     
     func openURL(url: String) {
-        print("codigo en wireframe \(url)")
         if let url = URL(string: url) {
-            print("codigo listo para abrir \(url)")
-            UIApplication.shared.open(url)
+            if UIApplication.shared.canOpenURL(url) == true {
+                UIApplication.shared.open(url)
+            } else {
+                self.showCustomModalAlert(self.view, title: "Web does not found", content: "try again.", completion: nil)
+            }
         } else {
-            print("error al sacar la url")
-            self.showCustomModalAlert(self.view, title: "Web does not found", content: "try again.", completion: nil)
+            print("QR Code does not contain a valid URL")
+            self.showCustomModalAlert(self.view, title: "QR not founded",
+                                      content: "QR Code does not contain a web", completion: nil)
             return
         }
     }
