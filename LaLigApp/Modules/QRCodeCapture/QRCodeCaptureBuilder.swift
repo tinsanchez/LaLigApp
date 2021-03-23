@@ -14,7 +14,7 @@ class QRCodeCaptureBuilder {
     static func build() -> QRCodeCaptureView {
         let view = QRCodeCaptureView.init(nibName: String(describing: QRCodeCaptureView.self), bundle: nil)
         
-        view.tabBarItem = UITabBarItem(title: "QRCode", image: UIImage(systemName: "qrcode"), tag: 0)
+        view.tabBarItem = UITabBarItem(title: "QRCode".localizedString(), image: UIImage(systemName: "qrcode"), tag: 0)
         
         let presenter = QRCodeCapturePresenter()
         let entity = QRCodeCaptureEntity()

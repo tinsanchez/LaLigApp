@@ -14,7 +14,7 @@ class TeamListBuilder {
     static func build() -> TeamListView {
         let view = TeamListView.init(nibName: String(describing: TeamListView.self), bundle: nil)
         
-        view.tabBarItem = UITabBarItem(title: "Teams List", image: UIImage(systemName: "scroll"), tag: 0)
+        view.tabBarItem = UITabBarItem(title: "Teams List".localizedString(), image: UIImage(systemName: "scroll"), tag: 0)
         
         let presenter = TeamListPresenter()
         let entity = TeamListEntity()

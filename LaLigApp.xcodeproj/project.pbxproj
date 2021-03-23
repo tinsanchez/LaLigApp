@@ -17,15 +17,17 @@
 		9C11E8292608AEC100BE6763 /* QRCodeCaptureWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C11E8212608AEC100BE6763 /* QRCodeCaptureWireframe.swift */; };
 		9C11E82F2608F18A00BE6763 /* OrientationForViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C11E82E2608F18A00BE6763 /* OrientationForViewExtension.swift */; };
 		9C11E8782609185800BE6763 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C11E8772609185800BE6763 /* LoadingView.xib */; };
-		9C11E893260918E200BE6763 /* LoginFormView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C11E892260918E200BE6763 /* LoginFormView.xib */; };
 		9C11E8972609190100BE6763 /* MenuTapBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C11E8962609190100BE6763 /* MenuTapBarView.xib */; };
 		9C11E89A2609191400BE6763 /* QRCodeCaptureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C11E8992609191400BE6763 /* QRCodeCaptureView.xib */; };
-		9C11E89E2609193300BE6763 /* TeamDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C11E89D2609193300BE6763 /* TeamDetailView.xib */; };
 		9C11E8A02609193F00BE6763 /* DetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C11E89F2609193F00BE6763 /* DetailTableViewCell.xib */; };
 		9C11E8A22609195200BE6763 /* TeamListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C11E8A12609195200BE6763 /* TeamListView.xib */; };
 		9C11E8A52609196400BE6763 /* TeamListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C11E8A42609196400BE6763 /* TeamListTableViewCell.xib */; };
 		9C11E8C926091D7300BE6763 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C11E8C826091D7300BE6763 /* GoogleService-Info.plist */; };
 		9C11E8DE260920B400BE6763 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C11E8DD260920B400BE6763 /* LaunchScreen.storyboard */; };
+		9C11E8E92609E35D00BE6763 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C11E8EB2609E35D00BE6763 /* InfoPlist.strings */; };
+		9C11E8ED2609E36500BE6763 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C11E8EF2609E36500BE6763 /* Localizable.strings */; };
+		9C11E8FC260A185600BE6763 /* TeamDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C11E8FE260A185600BE6763 /* TeamDetailView.xib */; };
+		9C11E905260A191400BE6763 /* LoginFormView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C11E907260A191400BE6763 /* LoginFormView.xib */; };
 		9C22A27225FAA1840033CDD5 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C22A26A25FAA1840033CDD5 /* BasePresenter.swift */; };
 		9C22A27425FAA1840033CDD5 /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C22A26C25FAA1840033CDD5 /* BaseInteractor.swift */; };
 		9C22A27525FAA1840033CDD5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C22A26D25FAA1840033CDD5 /* BaseViewController.swift */; };
@@ -94,16 +96,24 @@
 		9C11E8212608AEC100BE6763 /* QRCodeCaptureWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeCaptureWireframe.swift; sourceTree = "<group>"; };
 		9C11E82E2608F18A00BE6763 /* OrientationForViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationForViewExtension.swift; sourceTree = "<group>"; };
 		9C11E8772609185800BE6763 /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
-		9C11E892260918E200BE6763 /* LoginFormView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginFormView.xib; sourceTree = "<group>"; };
 		9C11E8962609190100BE6763 /* MenuTapBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuTapBarView.xib; sourceTree = "<group>"; };
 		9C11E8992609191400BE6763 /* QRCodeCaptureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRCodeCaptureView.xib; sourceTree = "<group>"; };
-		9C11E89D2609193300BE6763 /* TeamDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeamDetailView.xib; sourceTree = "<group>"; };
 		9C11E89F2609193F00BE6763 /* DetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailTableViewCell.xib; sourceTree = "<group>"; };
 		9C11E8A12609195200BE6763 /* TeamListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeamListView.xib; sourceTree = "<group>"; };
 		9C11E8A42609196400BE6763 /* TeamListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeamListTableViewCell.xib; sourceTree = "<group>"; };
-		9C11E8BF26091C4300BE6763 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
 		9C11E8C826091D7300BE6763 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9C11E8DD260920B400BE6763 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9C11E8EA2609E35D00BE6763 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9C11E8EE2609E36500BE6763 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9C11E8F12609E37600BE6763 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9C11E8F22609E37700BE6763 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9C11E8F32609E40A00BE6763 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C11E8FD260A185600BE6763 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TeamDetailView.xib; sourceTree = "<group>"; };
+		9C11E901260A186200BE6763 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/TeamDetailView.strings; sourceTree = "<group>"; };
+		9C11E903260A186300BE6763 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/TeamDetailView.strings; sourceTree = "<group>"; };
+		9C11E906260A191400BE6763 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LoginFormView.xib; sourceTree = "<group>"; };
+		9C11E90A260A191A00BE6763 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LoginFormView.strings; sourceTree = "<group>"; };
+		9C11E90C260A192000BE6763 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LoginFormView.strings; sourceTree = "<group>"; };
 		9C22A22125FA38F50033CDD5 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		9C22A22225FA39240033CDD5 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		9C22A26A25FAA1840033CDD5 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
@@ -196,13 +206,23 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		9C11E8E22609E28C00BE6763 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				9C11E8EB2609E35D00BE6763 /* InfoPlist.strings */,
+				9C11E8EF2609E36500BE6763 /* Localizable.strings */,
+			);
+			name = Resource;
+			path = LaLigApp/Resource;
+			sourceTree = "<group>";
+		};
 		9C22A21C25FA30BF0033CDD5 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
 				9C22A22125FA38F50033CDD5 /* Development.xcconfig */,
 				9C22A28D25FBE70E0033CDD5 /* Environment.swift */,
 				9C11E8C826091D7300BE6763 /* GoogleService-Info.plist */,
-				9C11E8C026091C4300BE6763 /* Info.plist */,
+				9C11E8F32609E40A00BE6763 /* Info.plist */,
 				9C22A22225FA39240033CDD5 /* Production.xcconfig */,
 			);
 			path = Configuration;
@@ -367,7 +387,7 @@
 			isa = PBXGroup;
 			children = (
 				9C81C41D2600C4620031D7E9 /* DetailTableViewCell */,
-				9C11E89D2609193300BE6763 /* TeamDetailView.xib */,
+				9C11E8FE260A185600BE6763 /* TeamDetailView.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -422,7 +442,7 @@
 		9C85F9C82602162800E33092 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				9C11E892260918E200BE6763 /* LoginFormView.xib */,
+				9C11E907260A191400BE6763 /* LoginFormView.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -431,6 +451,7 @@
 			isa = PBXGroup;
 			children = (
 				9CF2097225F97C840074BD7D /* LaLigApp */,
+				9C11E8E22609E28C00BE6763 /* Resource */,
 				9CF2097125F97C840074BD7D /* Products */,
 				ECBBC199CE57118F1A865A9C /* Pods */,
 				C261346C1A6C03ACAE7C3182 /* Frameworks */,
@@ -449,9 +470,9 @@
 			isa = PBXGroup;
 			children = (
 				9CF2097325F97C840074BD7D /* AppDelegate.swift */,
+				9C11E8DD260920B400BE6763 /* LaunchScreen.storyboard */,
 				9CF2097525F97C840074BD7D /* SceneDelegate.swift */,
 				9CF2097725F97C840074BD7D /* ViewController.swift */,
-				9C11E8DD260920B400BE6763 /* LaunchScreen.storyboard */,
 				9CF2097C25F97C840074BD7D /* Assets.xcassets */,
 				9C22A2AC25FBF11E0033CDD5 /* Components */,
 				9C22A21C25FA30BF0033CDD5 /* Configuration */,
@@ -526,6 +547,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				es,
 				Base,
 			);
 			mainGroup = 9CF2096725F97C840074BD7D;
@@ -544,13 +566,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C11E8A52609196400BE6763 /* TeamListTableViewCell.xib in Resources */,
-				9C11E89E2609193300BE6763 /* TeamDetailView.xib in Resources */,
+				9C11E8FC260A185600BE6763 /* TeamDetailView.xib in Resources */,
 				9C11E8972609190100BE6763 /* MenuTapBarView.xib in Resources */,
 				9C11E89A2609191400BE6763 /* QRCodeCaptureView.xib in Resources */,
 				9C11E8A22609195200BE6763 /* TeamListView.xib in Resources */,
-				9C11E893260918E200BE6763 /* LoginFormView.xib in Resources */,
+				9C11E8E92609E35D00BE6763 /* InfoPlist.strings in Resources */,
+				9C11E905260A191400BE6763 /* LoginFormView.xib in Resources */,
 				9C11E8782609185800BE6763 /* LoadingView.xib in Resources */,
 				9C11E8C926091D7300BE6763 /* GoogleService-Info.plist in Resources */,
+				9C11E8ED2609E36500BE6763 /* Localizable.strings in Resources */,
 				9C11E8A02609193F00BE6763 /* DetailTableViewCell.xib in Resources */,
 				9C11E8DE260920B400BE6763 /* LaunchScreen.storyboard in Resources */,
 				9CF2097D25F97C840074BD7D /* Assets.xcassets in Resources */,
@@ -689,12 +713,42 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9C11E8C026091C4300BE6763 /* Info.plist */ = {
+		9C11E8EB2609E35D00BE6763 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9C11E8BF26091C4300BE6763 /* Base */,
+				9C11E8EA2609E35D00BE6763 /* en */,
+				9C11E8F12609E37600BE6763 /* es */,
 			);
-			name = Info.plist;
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9C11E8EF2609E36500BE6763 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C11E8EE2609E36500BE6763 /* en */,
+				9C11E8F22609E37700BE6763 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		9C11E8FE260A185600BE6763 /* TeamDetailView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C11E8FD260A185600BE6763 /* Base */,
+				9C11E901260A186200BE6763 /* en */,
+				9C11E903260A186300BE6763 /* es */,
+			);
+			name = TeamDetailView.xib;
+			sourceTree = "<group>";
+		};
+		9C11E907260A191400BE6763 /* LoginFormView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C11E906260A191400BE6763 /* Base */,
+				9C11E90A260A191A00BE6763 /* en */,
+				9C11E90C260A192000BE6763 /* es */,
+			);
+			name = LoginFormView.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

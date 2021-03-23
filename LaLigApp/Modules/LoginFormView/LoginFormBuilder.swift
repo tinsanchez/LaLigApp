@@ -14,7 +14,7 @@ class LoginFormBuilder {
     static func build() -> LoginFormView {
         let view = LoginFormView.init(nibName: String(describing: LoginFormView.self), bundle: nil)
         
-        view.tabBarItem = UITabBarItem(title: "Login", image: UIImage(systemName: "note.text"), tag: 0)
+        view.tabBarItem = UITabBarItem(title: "Login".localizedString(), image: UIImage(systemName: "note.text"), tag: 0)
         
         let presenter = LoginFormPresenter()
         let entity = LoginFormEntity()

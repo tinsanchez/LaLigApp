@@ -43,13 +43,14 @@ class QRCodeCaptureView: BaseViewController, QRCodeCaptureViewContract, AVCaptur
         if captureSession?.isRunning == true {
             captureSession.stopRunning()
         }
-        self.tittleLabel.text = "Scan a QR Code"
+        self.tittleLabel.text = "Scan a QR Code".localizedString()
         self.URLLabel.text = ""
     }
 
     private func setupView() {
         
         view.backgroundColor = UIColor.black
+        
         captureSession = AVCaptureSession()
 
         guard let videoCaptureDevice = AVCaptureDevice.default(for: .video) else { return }
@@ -104,7 +105,7 @@ class QRCodeCaptureView: BaseViewController, QRCodeCaptureViewContract, AVCaptur
             guard let stringValue = readableObject.stringValue else { return }
             AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
             self.URLLabel.text = stringValue
-            self.tittleLabel.text = "Touch to open in Safary"
+            self.tittleLabel.text = "Touch to open in Safary".localizedString()
             view.bringSubviewToFront(tittleLabel)
             view.bringSubviewToFront(URLLabel)
             let tap = UITapGestureRecognizer(target: self, action: #selector(self.found))

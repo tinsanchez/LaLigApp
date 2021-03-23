@@ -42,12 +42,12 @@ class QRCodeCaptureWireframe: BaseWireframe, QRCodeCaptureWireframeContract {
             if UIApplication.shared.canOpenURL(url) == true {
                 UIApplication.shared.open(url)
             } else {
-                self.showCustomModalAlert(self.view, title: "Web does not found", content: "try again.", completion: nil)
+                self.showCustomModalAlert(self.view, title: "Web does not found".localizedString(), content: "try again.".localizedString(), completion: nil)
             }
         } else {
             print("QR Code does not contain a valid URL")
-            self.showCustomModalAlert(self.view, title: "QR not founded",
-                                      content: "QR Code does not contain a web", completion: nil)
+            self.showCustomModalAlert(self.view, title: "QR not founded".localizedString(),
+                                      content: "QR Code does not contain a web".localizedString(), completion: nil)
             return
         }
     }

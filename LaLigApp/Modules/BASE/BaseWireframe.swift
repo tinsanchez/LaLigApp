@@ -141,7 +141,7 @@ class BaseWireframe {
             })
         } else {
             // MARK: LOCALIZED STRING
-            basicAlert.addAction(UIAlertAction.init(title: "_generic_accept_title"/*.localizedString()*/,
+            basicAlert.addAction(UIAlertAction.init(title: "_generic_accept_title".localizedString(),
                                                     style: .default, handler: nil)
             )
         }

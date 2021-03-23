@@ -58,11 +58,11 @@ class TeamDetailView: BaseViewController, TeamDetailViewContract {
         
         var teamData: [String: String] = [:]
         
-        teamData["Shortname:"] = team.shortName
-        teamData["Founded:"] = "\(team.founded)"
-        teamData["Venue:"] = team.venue
-        teamData["Clubcolors:"] = team.clubColors
-        teamData["Website:"] = team.website
+        teamData["Shortname:".localizedString()] = team.shortName
+        teamData["Founded:".localizedString()] = "\(team.founded)"
+        teamData["Venue:".localizedString()] = team.venue
+        teamData["Clubcolors:".localizedString()] = team.clubColors
+        teamData["Website:".localizedString()] = team.website
         
         // MARK: Implementado "sorted" para devolverlo ordenado en la misma
         // posisión siempre. Como devuelve un Array, he tenido que cambiar el

@@ -29,8 +29,8 @@ class LoginFormPresenter: BasePresenter, LoginFormPresenterContract {
     
     func showNoTermsAcceptAlert() {
         wireframe.showCustomModalAlert(wireframe.view,
-                                       title: "Accept Terms and Conditions",
-                                       content: "to register on this platform it is necessary to accept", completion: nil)
+                                       title: "Accept Terms and Conditions".localizedString(),
+                                       content: "to register on this platform it is necessary to accept".localizedString(), completion: nil)
     }
     
     func registerPressed(email: String, password: String) {
@@ -49,8 +49,8 @@ class LoginFormPresenter: BasePresenter, LoginFormPresenterContract {
         if confirmed == true {
             interactor.sendConfirmationEmail()
             wireframe.showCustomModalAlert(wireframe.view,
-                                       title: "Register Completed!",
-                                       content: "Check your inbox email", completion: nil)
+                                           title: "Register Completed!".localizedString(),
+                                           content: "Check your inbox email".localizedString(), completion: nil)
         }
     }
 }

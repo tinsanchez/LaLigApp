@@ -1,21 +1,21 @@
 
 /* Class = "UITextField"; placeholder = "Password"; ObjectID = "FmK-pa-FfN"; */
-"FmK-pa-FfN.placeholder" = "Password";
+"FmK-pa-FfN.placeholder" = "Contraseña";
 
 /* Class = "UILabel"; text = "Accept terms and conditions"; ObjectID = "GPA-ri-t9N"; */
-"GPA-ri-t9N.text" = "Accept terms and conditions";
+"GPA-ri-t9N.text" = "Aceptar Términos y Condiciones";
 
 /* Class = "UITextField"; placeholder = "Confirm password"; ObjectID = "Q56-GW-nIF"; */
-"Q56-GW-nIF.placeholder" = "Confirm password";
+"Q56-GW-nIF.placeholder" = "Confirmar contraseña";
 
 /* Class = "UIButton"; normalTitle = "Register"; ObjectID = "Sow-1w-dP0"; */
-"Sow-1w-dP0.normalTitle" = "Register";
+"Sow-1w-dP0.normalTitle" = "Regístrate";
 
 /* Class = "UITextField"; placeholder = "Repeat email"; ObjectID = "jb5-SS-iF0"; */
-"jb5-SS-iF0.placeholder" = "Repeat email";
+"jb5-SS-iF0.placeholder" = "Repite el email";
 
 /* Class = "UITextField"; placeholder = "Full name"; ObjectID = "qsm-ha-vff"; */
-"qsm-ha-vff.placeholder" = "Full name";
+"qsm-ha-vff.placeholder" = "Nombre completo";
 
 /* Class = "UITextField"; placeholder = "Email"; ObjectID = "wVf-wc-skR"; */
 "wVf-wc-skR.placeholder" = "Email";

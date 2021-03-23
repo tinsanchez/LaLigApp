@@ -26,8 +26,8 @@ class QRCodeCapturePresenter: BasePresenter, QRCodeCapturePresenterContract {
     
     func showNotSuportedAlert() {
         wireframe.showCustomModalAlert(wireframe.view,
-                                       title: "Scanning not supported",
-                                       content: "Your device does not support scanning a code.", completion: nil)
+                                       title: "Scanning not supported".localizedString(),
+                                       content: "Your device does not support scanning a code.".localizedString(), completion: nil)
     }
     
     func capturedURL(url: String) {

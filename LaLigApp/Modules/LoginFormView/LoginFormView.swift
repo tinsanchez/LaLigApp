@@ -68,24 +68,24 @@ class LoginFormView: BaseViewController, LoginFormViewContract {
             return presenter.showNoTermsAcceptAlert()
         }
         guard self.nameTextfield.text != "" else {
-            return self.errorNameLabel.text = "Introduce a valid name"
+            return self.errorNameLabel.text = "Introduce a valid name".localizedString()
         }
         guard self.emailTextField.text != "" else {
-            return self.errorMailLabel.text = "Introduce a valid mail"
+            return self.errorMailLabel.text = "Introduce a valid mail".localizedString()
         }
         guard self.emailTextField.text == self.repeatEmailTexfield.text else {
-            return self.errorMailLabel2.text = "Email does not match"
+            return self.errorMailLabel2.text = "Email does not match".localizedString()
         }
         guard self.passwordTextfield.text != "" else {
-            return self.errorPassLabel.text = "Introduce a valid password"
+            return self.errorPassLabel.text = "Introduce a valid password".localizedString()
         }
         let patern = "[A-Z]"
         guard self.passwordTextfield.text?.range(of: patern, options: .regularExpression) != nil else {
-           return self.errorPassLabel.text = "Password must contain one capital letter"
+            return self.errorPassLabel.text = "Password must contain one capital letter".localizedString()
         }
         
         guard passwordTextfield.text == repeatPasswordTextfield.text else {
-            return self.errorPassLabel2.text = "Password does not match"
+            return self.errorPassLabel2.text = "Password does not match".localizedString()
         }
         guard let email = emailTextField.text, let password = passwordTextfield.text else { return }
         // MARK: Implementar mas expresiones regulares para que los datos cumplan mas requisitos, por ejemplo la
