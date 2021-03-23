@@ -26,6 +26,7 @@ class LoginFormView: BaseViewController, LoginFormViewContract {
     @IBOutlet weak var acceptTermsSwitch: UISwitch!
     @IBOutlet weak var acceptTermsLabel: UILabel!
     @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var scrollViewRef: UIScrollView!
     
     // swiftlint:disable:next weak_delegate
     private var textFieldsDelegate: UITextFieldDelegate! = LoginFormTextFieldDelegate()
@@ -38,6 +39,10 @@ class LoginFormView: BaseViewController, LoginFormViewContract {
         // MARK: Oculta el teclado cuando tocas fuera de el, introducido como extensión de UIViewController,
         // archivo swift dentro de carpeta extensiones.
         self.hideKeyboardWhenTappedAround()
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow),
+                                               name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide),
+                                               name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -67,8 +72,8 @@ class LoginFormView: BaseViewController, LoginFormViewContract {
         guard self.acceptTermsSwitch.isOn else {
             return presenter.showNoTermsAcceptAlert()
         }
-        guard self.nameTextfield.text != "" else {
-            return self.errorNameLabel.text = "Introduce a valid name".localizedString()
+        guard self.nameTextfield.text!.count >= 5 else {
+            return self.errorNameLabel.text = "Introduce a valid name, minimun 6 letters".localizedString()
         }
         guard self.emailTextField.text != "" else {
             return self.errorMailLabel.text = "Introduce a valid mail".localizedString()
@@ -97,16 +102,30 @@ class LoginFormView: BaseViewController, LoginFormViewContract {
         // que actualice la vista con los posibles errores.
         presenter.registerPressed(email: email, password: password)
     }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+
+        guard let userInfo = notification.userInfo else { return }
+        var keyboardFrame: CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey]
+                                        // swiftlint:disable force_cast
+                                        as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+
+        var contentInset: UIEdgeInsets = self.scrollViewRef.contentInset
+        contentInset.bottom = keyboardFrame.size.height + 20
+        self.scrollViewRef.contentInset = contentInset
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+
+        let contentInset: UIEdgeInsets = UIEdgeInsets.zero
+        self.scrollViewRef.contentInset = contentInset
+    }
 }
 
 class LoginFormTextFieldDelegate: NSObject, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        let nextTag = textField.tag + 1
-        if let nextTextField = textField.superview?.viewWithTag(nextTag) {
-            nextTextField.becomeFirstResponder()
-        } else {
             textField.resignFirstResponder()
-        }
         return true
     }
 }

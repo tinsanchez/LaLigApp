@@ -28,6 +28,7 @@
 		9C11E8ED2609E36500BE6763 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C11E8EF2609E36500BE6763 /* Localizable.strings */; };
 		9C11E8FC260A185600BE6763 /* TeamDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C11E8FE260A185600BE6763 /* TeamDetailView.xib */; };
 		9C11E905260A191400BE6763 /* LoginFormView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C11E907260A191400BE6763 /* LoginFormView.xib */; };
+		9C11E90F260A590A00BE6763 /* FitSubLayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C11E90E260A590A00BE6763 /* FitSubLayerExtension.swift */; };
 		9C22A27225FAA1840033CDD5 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C22A26A25FAA1840033CDD5 /* BasePresenter.swift */; };
 		9C22A27425FAA1840033CDD5 /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C22A26C25FAA1840033CDD5 /* BaseInteractor.swift */; };
 		9C22A27525FAA1840033CDD5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C22A26D25FAA1840033CDD5 /* BaseViewController.swift */; };
@@ -114,6 +115,7 @@
 		9C11E906260A191400BE6763 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LoginFormView.xib; sourceTree = "<group>"; };
 		9C11E90A260A191A00BE6763 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LoginFormView.strings; sourceTree = "<group>"; };
 		9C11E90C260A192000BE6763 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LoginFormView.strings; sourceTree = "<group>"; };
+		9C11E90E260A590A00BE6763 /* FitSubLayerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitSubLayerExtension.swift; sourceTree = "<group>"; };
 		9C22A22125FA38F50033CDD5 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		9C22A22225FA39240033CDD5 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		9C22A26A25FAA1840033CDD5 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 		9C22A27F25FBDC680033CDD5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				9C11E90E260A590A00BE6763 /* FitSubLayerExtension.swift */,
 				9C11E8082607BE0700BE6763 /* HideKeyboardWhenTapExtension.swift */,
 				9C11E82E2608F18A00BE6763 /* OrientationForViewExtension.swift */,
 				9C22A28025FBDC880033CDD5 /* StringExtension.swift */,
@@ -670,6 +673,7 @@
 				9C22A2D525FCD7DA0033CDD5 /* TeamListTableViewCell.swift in Sources */,
 				9C85F9AE260215F200E33092 /* LoginFormPresenter.swift in Sources */,
 				9C81C3EE25FF82E90031D7E9 /* TeamDetailPresenter.swift in Sources */,
+				9C11E90F260A590A00BE6763 /* FitSubLayerExtension.swift in Sources */,
 				9C22A27225FAA1840033CDD5 /* BasePresenter.swift in Sources */,
 				9C85F9BF2602161600E33092 /* MenuTapBarPresenter.swift in Sources */,
 				9CF2097425F97C840074BD7D /* AppDelegate.swift in Sources */,

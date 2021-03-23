@@ -38,6 +38,7 @@ class TeamDetailView: BaseViewController, TeamDetailViewContract {
                                  forCellReuseIdentifier: DetailTableViewCell.cellId)
         datasource = TeamDetailTableDataSource()
         delegate = TeamDetailTableDelegate()
+        // MARK: así en darkmode no se cambia el fondo de la tabla a negro.
         detailtableView.overrideUserInterfaceStyle = .light
         detailtableView.dataSource = datasource
         detailtableView.delegate = delegate
@@ -45,10 +46,11 @@ class TeamDetailView: BaseViewController, TeamDetailViewContract {
     
     func reloadViewWithData(team: Team) {
         if let url = URL(string: team.imageThumb) {
-            _ = UIView(SVGURL: url) { svglayer in
+            let svgView = UIView(SVGURL: url) { svglayer in
                 svglayer.resizeToFit(self.teamImageView.bounds)
-                self.teamImageView.layer.addSublayer(svglayer)
+               
             }
+            self.teamImageView.addSubview(svgView)
         }
         datasource.teamData = genericData(team: team)
         detailtableView.reloadData()

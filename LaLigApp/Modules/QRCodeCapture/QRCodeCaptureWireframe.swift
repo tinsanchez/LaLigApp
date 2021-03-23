@@ -42,7 +42,8 @@ class QRCodeCaptureWireframe: BaseWireframe, QRCodeCaptureWireframeContract {
             if UIApplication.shared.canOpenURL(url) == true {
                 UIApplication.shared.open(url)
             } else {
-                self.showCustomModalAlert(self.view, title: "Web does not found".localizedString(), content: "try again.".localizedString(), completion: nil)
+                self.showCustomModalAlert(self.view, title: "Web does not found".localizedString(),
+                                          content: "try again.".localizedString(), completion: nil)
             }
         } else {
             print("QR Code does not contain a valid URL")

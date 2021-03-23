@@ -25,7 +25,7 @@
                     <rect key="frame" x="20" y="309" width="374" height="553"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="udr-Vp-0pC">
+                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="udr-Vp-0pC">
                     <rect key="frame" x="137" y="124" width="140" height="140"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="140" id="36w-2c-4wI"/>
@@ -74,15 +74,26 @@
             <viewLayoutGuide key="safeArea" id="tAt-aP-EcC"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="udr-Vp-0pC" firstAttribute="top" secondItem="tAt-aP-EcC" secondAttribute="top" constant="80" id="45L-os-iJG"/>
+                <constraint firstItem="udr-Vp-0pC" firstAttribute="top" secondItem="tAt-aP-EcC" secondAttribute="top" constant="80" id="45L-os-iJG">
+                    <variation key="heightClass=compact-widthClass=compact" constant="15"/>
+                    <variation key="heightClass=compact-widthClass=regular" constant="15"/>
+                    <variation key="heightClass=regular-widthClass=regular" constant="160"/>
+                </constraint>
                 <constraint firstItem="JeP-DX-XHW" firstAttribute="leading" secondItem="tAt-aP-EcC" secondAttribute="leading" constant="33" id="IhW-7Y-4Zd"/>
                 <constraint firstItem="tAt-aP-EcC" firstAttribute="trailing" secondItem="dbJ-e6-QgO" secondAttribute="trailing" constant="20" id="Ob3-dU-YDm"/>
-                <constraint firstItem="EXc-es-PEQ" firstAttribute="top" secondItem="tAt-aP-EcC" secondAttribute="top" constant="30" id="RFH-sF-y0w"/>
+                <constraint firstItem="EXc-es-PEQ" firstAttribute="top" secondItem="tAt-aP-EcC" secondAttribute="top" constant="30" id="RFH-sF-y0w">
+                    <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                </constraint>
                 <constraint firstItem="tAt-aP-EcC" firstAttribute="trailing" secondItem="EXc-es-PEQ" secondAttribute="trailing" constant="20" id="VFN-7z-XFq"/>
-                <constraint firstItem="dbJ-e6-QgO" firstAttribute="top" secondItem="udr-Vp-0pC" secondAttribute="bottom" constant="45" id="XcP-1F-PbO"/>
+                <constraint firstItem="dbJ-e6-QgO" firstAttribute="top" secondItem="udr-Vp-0pC" secondAttribute="bottom" constant="45" id="XcP-1F-PbO">
+                    <variation key="heightClass=compact-widthClass=compact" constant="15"/>
+                    <variation key="heightClass=compact-widthClass=regular" constant="15"/>
+                </constraint>
                 <constraint firstItem="dbJ-e6-QgO" firstAttribute="bottom" secondItem="tAt-aP-EcC" secondAttribute="bottom" id="dh6-hO-1Yn"/>
                 <constraint firstItem="udr-Vp-0pC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="f9T-vI-mtp"/>
-                <constraint firstItem="JeP-DX-XHW" firstAttribute="top" secondItem="tAt-aP-EcC" secondAttribute="top" constant="25" id="lYb-vv-r0t"/>
+                <constraint firstItem="JeP-DX-XHW" firstAttribute="top" secondItem="tAt-aP-EcC" secondAttribute="top" constant="25" id="lYb-vv-r0t">
+                    <variation key="heightClass=regular-widthClass=regular" constant="70"/>
+                </constraint>
                 <constraint firstItem="dbJ-e6-QgO" firstAttribute="leading" secondItem="tAt-aP-EcC" secondAttribute="leading" constant="20" id="oaQ-N5-o9l"/>
             </constraints>
             <point key="canvasLocation" x="-168.11594202898553" y="66.964285714285708"/>

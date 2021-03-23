@@ -27,6 +27,7 @@ class QRCodeCapturePresenter: BasePresenter, QRCodeCapturePresenterContract {
     func showNotSuportedAlert() {
         wireframe.showCustomModalAlert(wireframe.view,
                                        title: "Scanning not supported".localizedString(),
+                                       // swiftlint:disable line_length
                                        content: "Your device does not support scanning a code.".localizedString(), completion: nil)
     }
     

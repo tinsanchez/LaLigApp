@@ -30,6 +30,7 @@ class LoginFormPresenter: BasePresenter, LoginFormPresenterContract {
     func showNoTermsAcceptAlert() {
         wireframe.showCustomModalAlert(wireframe.view,
                                        title: "Accept Terms and Conditions".localizedString(),
+                                       // swiftlint:disable line_length
                                        content: "to register on this platform it is necessary to accept".localizedString(), completion: nil)
     }
     
