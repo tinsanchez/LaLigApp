@@ -53,10 +53,10 @@ class LoginFormView: BaseViewController, LoginFormViewContract {
     }
     
     private func setupView() {
-        nameTextfield.tag = 0
-        nameTextfield.delegate = textFieldsDelegate
-        phoneNumberTextfield.tag = 1
+        phoneNumberTextfield.tag = 0
         phoneNumberTextfield.delegate = textFieldsDelegate
+        nameTextfield.tag = 1
+        nameTextfield.delegate = textFieldsDelegate
         emailTextField.tag = 2
         emailTextField.delegate = textFieldsDelegate
         repeatEmailTexfield.tag = 3
@@ -136,7 +136,7 @@ class LoginFormTextFieldDelegate: NSObject, UITextFieldDelegate {
     // introducidos del usuario son correctos para un número
     // de teléfono en el delegado.
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if textField == textField.viewWithTag(1) {
+        if textField == textField.viewWithTag(0) {
             let patern = "[0-9]"
             if textField.text?.range(of: patern, options: .regularExpression) != nil && textField.text!.count >= 9 {
                 textField.resignFirstResponder()

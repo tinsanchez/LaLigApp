@@ -14,11 +14,11 @@
                 <outlet property="emailTextField" destination="wVf-wc-skR" id="1we-UI-ous"/>
                 <outlet property="errorMailLabel" destination="bpB-tu-z8i" id="pFJ-mU-Cdd"/>
                 <outlet property="errorMailLabel2" destination="7KE-Zl-AOh" id="uuo-lq-Lv4"/>
-                <outlet property="errorNameLabel" destination="rDL-nd-W7u" id="kis-gS-Hnm"/>
+                <outlet property="errorNameLabel" destination="Z0S-9n-3sk" id="O2k-w8-PW2"/>
                 <outlet property="errorPassLabel" destination="0mv-0g-FC9" id="rOG-fk-l7c"/>
                 <outlet property="errorPassLabel2" destination="53i-DQ-4aT" id="zbO-0q-EeS"/>
                 <outlet property="errorPhoneLabel" destination="rDL-nd-W7u" id="qU7-lm-bQX"/>
-                <outlet property="nameTextfield" destination="qsm-ha-vff" id="WpY-pu-4D9"/>
+                <outlet property="nameTextfield" destination="Xqw-ZI-30j" id="TjQ-He-OuK"/>
                 <outlet property="passwordTextfield" destination="FmK-pa-FfN" id="SHD-GK-nSR"/>
                 <outlet property="phoneNumberTextfield" destination="qsm-ha-vff" id="4xE-X2-IzO"/>
                 <outlet property="registerButton" destination="Sow-1w-dP0" id="V5d-9s-w69"/>
@@ -45,27 +45,8 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="8ZW-mn-qHw">
                                     <rect key="frame" x="10" y="174" width="330" height="418"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Uzs-dk-IQi">
-                                            <rect key="frame" x="0.0" y="0.0" width="330" height="48"/>
-                                            <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full name" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="Xqw-ZI-30j">
-                                                    <rect key="frame" x="0.0" y="0.0" width="330" height="34"/>
-                                                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="go" enablesReturnKeyAutomatically="YES" textContentType="name"/>
-                                                </textField>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0S-9n-3sk" userLabel="ErrorNameLabel">
-                                                    <rect key="frame" x="0.0" y="34" width="330" height="14"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="14" id="97e-pT-Bhu"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="12"/>
-                                                    <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0s0-35-fQf">
-                                            <rect key="frame" x="0.0" y="57" width="330" height="48"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="330" height="48"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telephone" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="qsm-ha-vff">
                                                     <rect key="frame" x="0.0" y="0.0" width="330" height="34"/>
@@ -76,6 +57,25 @@
                                                     <rect key="frame" x="0.0" y="34" width="330" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="14" id="7fd-pL-hbw"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="12"/>
+                                                    <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Uzs-dk-IQi">
+                                            <rect key="frame" x="0.0" y="57" width="330" height="48"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full name" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="Xqw-ZI-30j">
+                                                    <rect key="frame" x="0.0" y="0.0" width="330" height="34"/>
+                                                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="go" enablesReturnKeyAutomatically="YES" textContentType="name"/>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0S-9n-3sk" userLabel="ErrorNameLabel">
+                                                    <rect key="frame" x="0.0" y="34" width="330" height="14"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="14" id="97e-pT-Bhu"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="12"/>
                                                     <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
