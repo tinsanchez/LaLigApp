@@ -15,6 +15,8 @@ class LoginFormView: BaseViewController, LoginFormViewContract {
 
     @IBOutlet weak var nameTextfield: UITextField!
     @IBOutlet weak var errorNameLabel: UILabel!
+    @IBOutlet weak var phoneNumberTextfield: UITextField!
+    @IBOutlet weak var errorPhoneLabel: UILabel!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var errorMailLabel: UILabel!
     @IBOutlet weak var repeatEmailTexfield: UITextField!
@@ -53,13 +55,15 @@ class LoginFormView: BaseViewController, LoginFormViewContract {
     private func setupView() {
         nameTextfield.tag = 0
         nameTextfield.delegate = textFieldsDelegate
-        emailTextField.tag = 1
+        phoneNumberTextfield.tag = 1
+        phoneNumberTextfield.delegate = textFieldsDelegate
+        emailTextField.tag = 2
         emailTextField.delegate = textFieldsDelegate
-        repeatEmailTexfield.tag = 2
+        repeatEmailTexfield.tag = 3
         repeatEmailTexfield.delegate = textFieldsDelegate
-        passwordTextfield.tag = 3
+        passwordTextfield.tag = 4
         passwordTextfield.delegate = textFieldsDelegate
-        repeatPasswordTextfield.tag = 4
+        repeatPasswordTextfield.tag = 5
         repeatPasswordTextfield.delegate = textFieldsDelegate
     }
 
@@ -127,5 +131,19 @@ class LoginFormTextFieldDelegate: NSObject, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
             textField.resignFirstResponder()
         return true
+    }
+    // MARK: Esto es solo un ejemplo de como comprobar que los datos
+    // introducidos del usuario son correctos para un número
+    // de teléfono en el delegado.
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField == textField.viewWithTag(1) {
+            let patern = "[0-9]"
+            if textField.text?.range(of: patern, options: .regularExpression) != nil && textField.text!.count >= 9 {
+                textField.resignFirstResponder()
+            } else {
+                textField.text = ""
+                textField.resignFirstResponder()
+            }
+        }
     }
 }

@@ -17,8 +17,10 @@
                 <outlet property="errorNameLabel" destination="rDL-nd-W7u" id="kis-gS-Hnm"/>
                 <outlet property="errorPassLabel" destination="0mv-0g-FC9" id="rOG-fk-l7c"/>
                 <outlet property="errorPassLabel2" destination="53i-DQ-4aT" id="zbO-0q-EeS"/>
+                <outlet property="errorPhoneLabel" destination="rDL-nd-W7u" id="qU7-lm-bQX"/>
                 <outlet property="nameTextfield" destination="qsm-ha-vff" id="WpY-pu-4D9"/>
                 <outlet property="passwordTextfield" destination="FmK-pa-FfN" id="SHD-GK-nSR"/>
+                <outlet property="phoneNumberTextfield" destination="qsm-ha-vff" id="4xE-X2-IzO"/>
                 <outlet property="registerButton" destination="Sow-1w-dP0" id="V5d-9s-w69"/>
                 <outlet property="repeatEmailTexfield" destination="jb5-SS-iF0" id="GB8-HR-dLw"/>
                 <outlet property="repeatPasswordTextfield" destination="Q56-GW-nIF" id="NmF-Ex-1IA"/>
@@ -41,18 +43,37 @@
                             <rect key="frame" x="0.0" y="0.0" width="350" height="766"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="8ZW-mn-qHw">
-                                    <rect key="frame" x="10" y="202.66666666666663" width="330" height="361"/>
+                                    <rect key="frame" x="10" y="174" width="330" height="418"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0s0-35-fQf">
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Uzs-dk-IQi">
                                             <rect key="frame" x="0.0" y="0.0" width="330" height="48"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full name" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="qsm-ha-vff">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full name" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="Xqw-ZI-30j">
                                                     <rect key="frame" x="0.0" y="0.0" width="330" height="34"/>
                                                     <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="go" enablesReturnKeyAutomatically="YES" textContentType="name"/>
                                                 </textField>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDL-nd-W7u" userLabel="ErrorNameLabel">
-                                                    <rect key="frame" x="0.0" y="34.000000000000028" width="330" height="14"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0S-9n-3sk" userLabel="ErrorNameLabel">
+                                                    <rect key="frame" x="0.0" y="34" width="330" height="14"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="14" id="97e-pT-Bhu"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="12"/>
+                                                    <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0s0-35-fQf">
+                                            <rect key="frame" x="0.0" y="57" width="330" height="48"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telephone" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="qsm-ha-vff">
+                                                    <rect key="frame" x="0.0" y="0.0" width="330" height="34"/>
+                                                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="go" enablesReturnKeyAutomatically="YES" textContentType="tel"/>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDL-nd-W7u" userLabel="ErrorPhoneLabel">
+                                                    <rect key="frame" x="0.0" y="34" width="330" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="14" id="7fd-pL-hbw"/>
                                                     </constraints>
@@ -63,7 +84,7 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Jnn-oR-WOR">
-                                            <rect key="frame" x="0.0" y="57.000000000000028" width="330" height="48"/>
+                                            <rect key="frame" x="0.0" y="114" width="330" height="48"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="wVf-wc-skR">
                                                     <rect key="frame" x="0.0" y="0.0" width="330" height="34"/>
@@ -82,7 +103,7 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jqU-tz-UOU">
-                                            <rect key="frame" x="0.0" y="114.00000000000003" width="330" height="48"/>
+                                            <rect key="frame" x="0.0" y="171" width="330" height="48"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repeat email" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="jb5-SS-iF0">
                                                     <rect key="frame" x="0.0" y="0.0" width="330" height="34"/>
@@ -101,12 +122,12 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tai-8u-1Mt">
-                                            <rect key="frame" x="0.0" y="171.00000000000003" width="330" height="48"/>
+                                            <rect key="frame" x="0.0" y="228" width="330" height="48"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="FmK-pa-FfN">
                                                     <rect key="frame" x="0.0" y="0.0" width="330" height="34"/>
                                                     <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="new-password"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0mv-0g-FC9" userLabel="ErrorPassLabel">
                                                     <rect key="frame" x="0.0" y="34" width="330" height="14"/>
@@ -120,12 +141,12 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bWd-RM-oo0">
-                                            <rect key="frame" x="0.0" y="228.00000000000003" width="330" height="47.999999999999972"/>
+                                            <rect key="frame" x="0.0" y="285" width="330" height="48"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm password" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="Q56-GW-nIF">
                                                     <rect key="frame" x="0.0" y="0.0" width="330" height="34"/>
                                                     <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="new-password"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53i-DQ-4aT" userLabel="ErrorPassLabel2">
                                                     <rect key="frame" x="0.0" y="34" width="330" height="14"/>
@@ -139,7 +160,7 @@
                                             </subviews>
                                         </stackView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sow-1w-dP0">
-                                            <rect key="frame" x="0.0" y="285" width="330" height="36"/>
+                                            <rect key="frame" x="0.0" y="342" width="330" height="36"/>
                                             <color key="backgroundColor" red="0.73091322179999996" green="0.72142767910000005" blue="0.53884303570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" name="GillSans-SemiBoldItalic" family="Gill Sans" pointSize="20"/>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -149,14 +170,14 @@
                                             </connections>
                                         </button>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="v4n-YE-Ufd">
-                                            <rect key="frame" x="0.0" y="330" width="330" height="31"/>
+                                            <rect key="frame" x="0.0" y="387" width="330" height="31"/>
                                             <subviews>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="V8a-yI-bS6">
                                                     <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                                                     <color key="onTintColor" red="0.76717036959999996" green="0.74696940180000004" blue="0.57707846159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accept terms and conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPA-ri-t9N">
-                                                    <rect key="frame" x="65" y="6.6666666666667425" width="265" height="17.333333333333332"/>
+                                                    <rect key="frame" x="65" y="7" width="265" height="17.333333333333332"/>
                                                     <fontDescription key="fontDescription" name="GillSans-Italic" family="Gill Sans" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>

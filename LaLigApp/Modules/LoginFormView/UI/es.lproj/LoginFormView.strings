@@ -15,7 +15,9 @@
 "jb5-SS-iF0.placeholder" = "Repite el email";
 
 /* Class = "UITextField"; placeholder = "Full name"; ObjectID = "qsm-ha-vff"; */
-"qsm-ha-vff.placeholder" = "Nombre completo";
+"qsm-ha-vff.placeholder" = "Teléfono";
 
 /* Class = "UITextField"; placeholder = "Email"; ObjectID = "wVf-wc-skR"; */
 "wVf-wc-skR.placeholder" = "Email";
+
+"Xqw-ZI-30j.placeholder" = "Nombre completo";
