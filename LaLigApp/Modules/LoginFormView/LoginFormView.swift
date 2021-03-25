@@ -134,7 +134,7 @@ class LoginFormTextFieldDelegate: NSObject, UITextFieldDelegate {
     }
     // MARK: Esto es solo un ejemplo de como comprobar que los datos
     // introducidos del usuario son correctos para un número
-    // de teléfono en el delegado.
+    // de teléfono en el delegado, en caso incorrecto lo borra.
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField == textField.viewWithTag(0) {
             let patern = "[0-9]"

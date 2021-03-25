@@ -1,0 +1,35 @@
+/* 
+  Localizable.strings
+  LaLigApp
+
+  Created by Valentín Sánchez Campañón on 23/3/21.
+  
+*/
+
+"_generic_accept_title" = "OK";
+"Accept Terms and Conditions" = "Accept Terms and Conditions";
+"Login" = "Login";
+"to register on this platform it is necessary to accept" = "to register on this platform it is necessary to accept";
+"Register Completed!" = "Register Completed!";
+"Check your inbox email" = "Check your inbox email";
+"Introduce a valid name, minimun 6 letters" = "Introduce a valid name, minimun 6 letters";
+"Introduce a valid mail" = "Introduce a valid mail";
+"Email does not match" = "Email does not match";
+"Introduce a valid password" = "Introduce a valid password";
+"Password must contain one capital letter" = "Password must contain one capital letter";
+"Password does not match" = "Password does not match";
+"QRCode" = "QRCode";
+"Scanning not supported" = "Scanning not supported";
+"Your device does not support scanning a code." = "Your device does not support scanning a code.";
+"Scan a QR Code" = "Scan a QR Code";
+"Touch to open in Safary" = "Touch link to open in Safary";
+"Web does not found" = "Web does not found";
+"try again." = "try again.";
+"QR not founded" = "QR not founded";
+"QR Code does not contain a web" = "QR Code does not contain a web";
+"Shortname:" = "Shortname:";
+"Founded:" = "Founded:";
+"Venue:" = "Venue:";
+"Clubcolors:" = "Clubcolors:";
+"Website:" = "Website:";
+"Teams List" = "Teams List";

@@ -1,0 +1,9 @@
+/* 
+  infoPlist.strings
+  LaLigApp
+
+  Created by Valentín Sánchez Campañón on 23/3/21.
+  
+*/
+
+"NSCameraUsageDescription" = "Necesitamos acceso a tu cámara para por escanear un código QR";
