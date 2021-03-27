@@ -97,12 +97,12 @@ class LoginFormView: BaseViewController, LoginFormViewContract {
             return self.errorPassLabel2.text = "Password does not match".localizedString()
         }
         guard let email = emailTextField.text, let password = passwordTextfield.text else { return }
-        // MARK: Implementar mas expresiones regulares para que los datos cumplan mas requisitos, por ejemplo la
-        // cantidad de caracteres mínimos que debe contener, o incluir un número en la contraseña,
-        // o que el mail contenga un dominio. Si creciese demasiado de las maneras de hacerlo
+        // MARK: Implementar mas expresiones regulares para que los datos cumplan mas requisitos,
+        // por ejemplo la cantidad de caracteres mínimos que debe contener, o incluir un número
+        // en la contraseña, o que el mail contenga un dominio. Si creciese demasiado la manera de hacerlo
         // sería con una extensión que contenga una struc con todas estas
         // comprobaciones y expresiones regulares, otra es pasar estas
-        // comprobaciones al presenter y obtuviesemos un valor Bool de vuelta
+        // comprobaciones al presenter y que obtuviesemos un valor Bool de vuelta
         // que actualice la vista con los posibles errores.
         presenter.registerPressed(email: email, password: password)
     }

@@ -40,8 +40,10 @@ class QRCodeCaptureView: BaseViewController, QRCodeCaptureViewContract, AVCaptur
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         AppUtility.lockOrientation(.all)
-        if captureSession?.isRunning == true {
-            captureSession.stopRunning()
+        DispatchQueue.global(qos: .background).async {
+            if self.captureSession?.isRunning == true {
+                self.captureSession.stopRunning()
+            }
         }
         self.tittleLabel.text = "Scan a QR Code".localizedString()
         self.URLLabel.text = ""
@@ -73,7 +75,6 @@ class QRCodeCaptureView: BaseViewController, QRCodeCaptureViewContract, AVCaptur
 
         if captureSession.canAddOutput(metadataOutput) {
             captureSession.addOutput(metadataOutput)
-
             metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
             metadataOutput.metadataObjectTypes = [.qr]
         } else {

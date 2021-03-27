@@ -12,7 +12,7 @@ opt_in_rules: # some rules are only opt-in
   - trailing_newline
   - colon
   - comma
-  - unused_private_declaration
+ # - unused_private_declaration
   - unused_declaration
   - unused_import
 # configurable rules can be customized from this configuration file
